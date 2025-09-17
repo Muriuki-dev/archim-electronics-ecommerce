@@ -9,8 +9,8 @@ import { products as allProducts } from "@/data/products";
 const tabs = ["new", "featured", "topSellers"];
 
 const ProductArea = () => {
-  // default to no filter (all products)
   const [activeTab, setActiveTab] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
@@ -19,9 +19,17 @@ const ProductArea = () => {
     try {
       setIsLoading(true);
       setTimeout(() => {
-        const filtered = activeTab
+        let filtered = activeTab
           ? allProducts.filter((product) => product.tags?.includes(activeTab))
           : allProducts;
+
+        // Apply search filter (case-insensitive)
+        if (searchTerm.trim()) {
+          filtered = filtered.filter((product) =>
+            product.name.toLowerCase().includes(searchTerm.toLowerCase())
+          );
+        }
+
         setFilteredProducts(filtered);
         setIsLoading(false);
       }, 500);
@@ -30,10 +38,14 @@ const ProductArea = () => {
       setIsError(true);
       setIsLoading(false);
     }
-  }, [activeTab]);
+  }, [activeTab, searchTerm]);
 
   const handleActiveTab = (tab) => {
     setActiveTab((prev) => (prev === tab ? null : tab));
+  };
+
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value);
   };
 
   // Render Logic
@@ -51,8 +63,6 @@ const ProductArea = () => {
         <ProductItem
           product={{
             ...prd,
-            // Show image as is (do not remove)
-            // Convert price to KES with formatting
             price: `KES ${prd.price.toLocaleString()}`,
           }}
         />
@@ -73,8 +83,9 @@ const ProductArea = () => {
             </div>
           </div>
           <div className="col-xl-7 col-lg-6 col-md-7">
-            <div className="tp-product-tab tp-product-tab-border tp-tab d-flex justify-content-md-end">
-              <ul className="nav nav-tabs justify-content-sm-end">
+            {/* Filter area: tabs + search */}
+            <div className="filter-area d-flex flex-wrap justify-content-md-end align-items-center gap-3">
+              <ul className="nav nav-tabs filter-tabs mb-0">
                 {tabs.map((tab, i) => (
                   <li key={i} className="nav-item">
                     <button
@@ -106,6 +117,15 @@ const ProductArea = () => {
                   </button>
                 </li>
               </ul>
+
+              <input
+                type="search"
+                placeholder="Search products..."
+                value={searchTerm}
+                onChange={handleSearchChange}
+                className="product-search"
+                aria-label="Search products"
+              />
             </div>
           </div>
         </div>
@@ -126,18 +146,54 @@ const ProductArea = () => {
           margin-bottom: 1rem;
         }
 
-        .tp-product-tab .nav-link {
+        .filter-area {
+          gap: 1rem;
+        }
+
+        .filter-tabs {
+          display: flex;
+          flex-wrap: wrap;
+          padding-left: 0;
+          margin-bottom: 0;
+          list-style: none;
+        }
+
+        .filter-tabs .nav-item {
+          margin-right: 0.5rem;
+        }
+
+        .filter-tabs .nav-link {
           font-weight: 600;
           color: #555;
           border: none;
           padding: 0.5rem 1rem;
           transition: color 0.3s;
+          border-radius: 4px;
+          background: #fff;
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
         }
 
-        .tp-product-tab .nav-link.active,
-        .tp-product-tab .nav-link:hover {
+        .filter-tabs .nav-link.active,
+        .filter-tabs .nav-link:hover {
           color: #007bff;
           border-bottom: 2px solid #007bff;
+          background: #e9f2ff;
+        }
+
+        .product-search {
+          padding: 0.5rem 1rem;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          min-width: 180px;
+          font-size: 1rem;
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+          transition: border-color 0.3s;
+        }
+
+        .product-search:focus {
+          outline: none;
+          border-color: #007bff;
+          box-shadow: 0 0 8px #007bff;
         }
 
         /* Responsive: 2 items per row on small/mobile */
@@ -145,6 +201,27 @@ const ProductArea = () => {
           .col-6 {
             max-width: 50% !important;
             flex: 0 0 50% !important;
+          }
+
+          /* Stack filter area on mobile */
+          .filter-area {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0.75rem;
+          }
+
+          .filter-tabs {
+            justify-content: center;
+            margin-bottom: 0.5rem;
+          }
+
+          .filter-tabs .nav-item {
+            margin-right: 0.25rem;
+          }
+
+          .product-search {
+            width: 100%;
+            min-width: unset;
           }
         }
       `}</style>
