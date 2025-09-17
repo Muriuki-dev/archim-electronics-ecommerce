@@ -54,11 +54,27 @@ const Header = () => {
               <div className="row align-items-center">
                 <div className="col-xl-2 col-lg-2 col-md-4 col-6">
   <div className="logo">
-    <Link href="/">
-      <span style={{ fontWeight: 'bold', fontSize: '20px' }}>ARCHIM ELECTRONICALS</span>
+    <Link href="/" style={{ textDecoration: 'none' }}>
+      <span style={{
+        fontFamily: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif',
+        fontWeight: '700',
+        fontSize: '22px',
+        letterSpacing: '1.2px',
+        color: '#1A1A1A',
+        textTransform: 'uppercase',
+        display: 'inline-block',
+        padding: '5px 10px',
+        borderRadius: '4px',
+        background: 'linear-gradient(90deg, #007CF0, #00DFD8)',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent'
+      }}>
+        ARCHIM ELECTRONICALS
+      </span>
     </Link>
   </div>
 </div>
+
 
                 <div className="col-xl-6 col-lg-7 d-none d-lg-block">
                   <div className="tp-header-search pl-70">
@@ -131,11 +147,27 @@ const Header = () => {
             <div className="row align-items-center">
               <div className="col-xl-2 col-lg-2 col-md-4 col-6">
   <div className="logo">
-    <Link href="/">
-      <span style={{ fontWeight: 'bold', fontSize: '20px' }}>ARCHIM ELECTRONICALS</span>
+    <Link href="/" style={{ textDecoration: 'none' }}>
+      <span style={{
+        fontFamily: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif',
+        fontWeight: '700',
+        fontSize: '22px',
+        letterSpacing: '1.2px',
+        color: '#1A1A1A',
+        textTransform: 'uppercase',
+        display: 'inline-block',
+        padding: '5px 10px',
+        borderRadius: '4px',
+        background: 'linear-gradient(90deg, #007CF0, #00DFD8)',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent'
+      }}>
+        ARCHIM ELECTRONICALS
+      </span>
     </Link>
   </div>
 </div>
+
               <div className="col-xl-6 col-lg-6 col-md-6 d-none d-md-block">
                 <div className="tp-header-sticky-menu main-menu menu-style-1 d-none d-lg-block">
                   <nav id="mobile-menu">
