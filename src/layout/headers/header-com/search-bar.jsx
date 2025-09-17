@@ -2,15 +2,8 @@ import React from "react";
 import useSearchFormSubmit from "@/hooks/use-search-form-submit";
 
 const SearchBar = ({ isSearchOpen, setIsSearchOpen }) => {
-  const { setSearchText, setCategory, handleSubmit, searchText } =
-    useSearchFormSubmit();
+  const { setSearchText, handleSubmit, searchText } = useSearchFormSubmit();
 
-  // selectHandle
-  const handleCategory = (value) => {
-    setCategory(value);
-  };
-
-  const categories = ["electronics", "fashion", "beauty", "jewelry"];
   return (
     <>
       <section
@@ -40,19 +33,7 @@ const SearchBar = ({ isSearchOpen, setIsSearchOpen }) => {
                       <i className="flaticon-search-1"></i>
                     </button>
                   </div>
-                  <div className="tp-search-category">
-                    <span>Search by : </span>
-                    {categories.map((c, i) => (
-                      <a
-                        key={i}
-                        onClick={() => handleCategory(c)}
-                        className="cursor-pointer"
-                      >
-                        {c}
-                        {i < categories.length - 1 && ", "}
-                      </a>
-                    ))}
-                  </div>
+                  {/* Removed category search UI */}
                 </form>
               </div>
             </div>
