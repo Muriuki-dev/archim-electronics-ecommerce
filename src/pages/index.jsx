@@ -16,25 +16,21 @@ import InstagramArea from "@/components/instagram/instagram-area";
 import CtaArea from "@/components/cta/cta-area";
 import Footer from "@/layout/footers/footer";
 
+
+
+
 export default function Home() {
   return (
-    <Wrapper>
-      <SEO pageTitle='Home'/>
-      <Header/>
-      <HomeHeroSlider/>
-      <ElectronicCategory/>
-      <FeatureArea/>
-      <ProductArea/>
-      <BannerArea/>
-      <OfferProducts/>
-      <ProductGadgetArea/>
-      <ProductBanner/>
-       <NewArrivals/>
-      <ProductSmArea/>
-      <BlogArea/>
-      <InstagramArea/>
-      <CtaArea/>
-      <Footer/>
-    </Wrapper>
-  )
+  <Wrapper>
+    <SEO pageTitle='Home'/>
+    <Header/>
+    
+    <HomeHeroSlider/>
+    <ProductArea/>
+    {/* <NewArrivals/> */}
+    {/* <FeatureArea/> */}
+    {/* <CtaArea/> */}
+    <Footer/>
+  </Wrapper>
+)
 }
