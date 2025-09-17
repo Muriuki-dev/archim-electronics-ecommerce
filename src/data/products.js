@@ -4,7 +4,7 @@ export const products = [
     name: "Cat5e RJ45 Ethernet Cable 20m",
     type: "Cable",
     price: 1000,
-    image: "https://unsplash.com/photos/two-black-cables-coiled-on-a-yellow-background-JfDcyqjedSg/download?force=true",
+    image: "/assets/img/category/shop1.jpg",
     tags: ["new"]
   },
   {
@@ -12,7 +12,7 @@ export const products = [
     name: "Cat6 Ethernet Patch Cord 2m",
     type: "Cable",
     price: 400,
-    image: "https://unsplash.com/photos/blue-optical-fiber-cables-inserted-into-ports-of-switch-panel-inside-server-rack-pamzgvziyJE/download?force=true",
+    image: "/assets/img/category/shop2.jpg",
     tags: ["new", "featured"]
   },
   {
@@ -20,7 +20,7 @@ export const products = [
     name: "Veto 1 Gang 1 Way Plastic Switch",
     type: "Switch",
     price: 30,
-    image: "https://unsplash.com/photos/black-computer-power-supply-unit-with-cables-E2aPGg02QdI/download?force=true",
+    image: "/assets/img/category/shop3.jpg",
     tags: ["featured"]
   },
   {
@@ -28,7 +28,7 @@ export const products = [
     name: "Veto 2 Gang 1 Way Smooth Gold Switch",
     type: "Switch",
     price: 370,
-    image: "https://unsplash.com/photos/two-black-cables-coiled-on-a-yellow-background-JfDcyqjedSg/download?force=true",
+    image: "/assets/img/category/shop4.jpg",
     tags: ["topSellers"]
   },
   {
@@ -36,7 +36,7 @@ export const products = [
     name: "E27 LED Bulb 12W Warm Light",
     type: "Bulb",
     price: 160,
-    image: "https://unsplash.com/photos/green-circuit-board-raLeFIxXgDY/download?force=true",
+    image: "/assets/img/category/shop5.jpg",
     tags: ["new", "topSellers"]
   },
   {
@@ -44,7 +44,7 @@ export const products = [
     name: "E27 LED Bulb 5W Daylight",
     type: "Bulb",
     price: 80,
-    image: "https://unsplash.com/photos/blue-optical-fiber-cables-inserted-into-ports-of-switch-panel-inside-server-rack-pamzgvziyJE/download?force=true",
+    image: "/assets/img/category/shop6.jpg",
     tags: ["featured"]
   },
   {
@@ -52,7 +52,7 @@ export const products = [
     name: "Ceiling Light 36W Square Panel",
     type: "Light Fixture",
     price: 2500,
-    image: "https://unsplash.com/photos/black-computer-power-supply-unit-with-cables-E2aPGg02QdI/download?force=true",
+    image: "/assets/img/category/shop7.jpg",
     tags: ["topSellers"]
   },
   {
@@ -60,7 +60,7 @@ export const products = [
     name: "Power Extension Cord 4 Way 3m",
     type: "Power Accessory",
     price: 500,
-    image: "https://unsplash.com/photos/green-circuit-board-raLeFIxXgDY/download?force=true",
+    image: "/assets/img/category/shop8.jpg",
     tags: ["new"]
   },
   {
@@ -68,7 +68,7 @@ export const products = [
     name: "Travel Adapter",
     type: "Power Accessory",
     price: 70,
-    image: "https://unsplash.com/photos/blue-optical-fiber-cables-inserted-into-ports-of-switch-panel-inside-server-rack-pamzgvziyJE/download?force=true",
+    image: "/assets/img/category/shop9.jpg",
     tags: ["topSellers"]
   },
   {
@@ -76,7 +76,7 @@ export const products = [
     name: "USB-C Power Adapter 12V 24W",
     type: "Adapter",
     price: 500,
-    image: "https://unsplash.com/photos/black-computer-power-supply-unit-with-cables-E2aPGg02QdI/download?force=true",
+    image: "/assets/img/category/shop10.jpg",
     tags: ["featured"]
   },
   {
@@ -84,7 +84,7 @@ export const products = [
     name: "TP-Link TL-WR941N Wireless Router",
     type: "Router",
     price: 4800,
-    image: "https://unsplash.com/photos/blue-optical-fiber-cables-inserted-into-ports-of-switch-panel-inside-server-rack-pamzgvziyJE/download?force=true",
+    image: "/assets/img/category/shop11.jpg",
     tags: ["topSellers", "featured"]
   },
   {
@@ -92,7 +92,7 @@ export const products = [
     name: "TP-Link 8-Port Desktop Switch (10/100Mbps)",
     type: "Switch / Networking",
     price: 1500,
-    image: "https://unsplash.com/photos/two-black-cables-coiled-on-a-yellow-background-JfDcyqjedSg/download?force=true",
+    image: "/assets/img/category/shop12.jpg",
     tags: ["new"]
   },
   {
@@ -100,7 +100,7 @@ export const products = [
     name: "Telephone Extension Cable 4 Core",
     type: "Cable",
     price: 220,
-    image: "https://unsplash.com/photos/black-computer-power-supply-unit-with-cables-E2aPGg02QdI/download?force=true",
+    image: "/assets/img/category/shop13.jpg",
     tags: ["featured"]
   },
   {
@@ -108,7 +108,7 @@ export const products = [
     name: "Coaxial RG6 Cable 300m Roll",
     type: "Cable",
     price: 6000,
-    image: "https://unsplash.com/photos/blue-optical-fiber-cables-inserted-into-ports-of-switch-panel-inside-server-rack-pamzgvziyJE/download?force=true",
+    image: "/assets/img/category/shop14.jpg",
     tags: ["topSellers"]
   },
   {
@@ -116,7 +116,7 @@ export const products = [
     name: "Light Switch Dimmer 500W",
     type: "Switch / Dimmer",
     price: 820,
-    image: "https://unsplash.com/photos/two-black-cables-coiled-on-a-yellow-background-JfDcyqjedSg/download?force=true",
+    image: "/assets/img/category/shop16.jpg",
     tags: ["new"]
   },
   {
@@ -124,7 +124,7 @@ export const products = [
     name: "USB to RJ45 Ethernet Adapter",
     type: "Adapter",
     price: 1200,
-    image: "https://unsplash.com/photos/green-circuit-board-raLeFIxXgDY/download?force=true",
+    image: "/assets/img/category/shop17.jpg",
     tags: ["featured"]
   },
   {
@@ -132,7 +132,7 @@ export const products = [
     name: "18650 Lithium Rechargeable Battery",
     type: "Battery",
     price: 200,
-    image: "https://unsplash.com/photos/black-computer-power-supply-unit-with-cables-E2aPGg02QdI/download?force=true",
+    image: "/assets/img/category/shop18.jpg",
     tags: ["new", "topSellers"]
   },
   {
@@ -140,7 +140,7 @@ export const products = [
     name: "47 inch LED TV Panel",
     type: "Display / Screen",
     price: 40000,
-    image: "https://unsplash.com/photos/blue-optical-fiber-cables-inserted-into-ports-of-switch-panel-inside-server-rack-pamzgvziyJE/download?force=true",
+    image: "/assets/img/category/shop19.jpg",
     tags: ["topSellers"]
   },
   {
@@ -148,7 +148,7 @@ export const products = [
     name: "Solar Flood Light 100W IP66",
     type: "Light / Outdoor",
     price: 4500,
-    image: "https://unsplash.com/photos/two-black-cables-coiled-on-a-yellow-background-JfDcyqjedSg/download?force=true",
+    image: "/assets/img/category/shop20.jpg",
     tags: ["featured", "new"]
   },
   {
@@ -156,7 +156,7 @@ export const products = [
     name: "Network Cable Tester (RJ45 / RJ11)",
     type: "Tool / Accessory",
     price: 650,
-    image: "https://unsplash.com/photos/green-circuit-board-raLeFIxXgDY/download?force=true",
+    image: "/assets/img/category/shop21.jpg",
     tags: ["topSellers"]
   }
 ];
