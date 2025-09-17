@@ -23,7 +23,6 @@ const ProductArea = () => {
           ? allProducts.filter((product) => product.tags?.includes(activeTab))
           : allProducts;
 
-        // Apply search filter (case-insensitive)
         if (searchTerm.trim()) {
           filtered = filtered.filter((product) =>
             product.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -48,6 +47,14 @@ const ProductArea = () => {
     setSearchTerm(e.target.value);
   };
 
+  // Format price to Kenyan Shillings
+  const formatPriceKES = (price) => {
+    return new Intl.NumberFormat("en-KE", {
+      style: "currency",
+      currency: "KES",
+    }).format(price);
+  };
+
   // Render Logic
   let content = null;
 
@@ -58,12 +65,13 @@ const ProductArea = () => {
   } else if (filteredProducts.length === 0) {
     content = <ErrorMsg msg="No Products found!" />;
   } else {
-    content = filteredProducts.map((prd, i) => (
-      <div key={i} className="col-xl-3 col-lg-3 col-sm-6 col-6">
+    console.log("Rendering products:", filteredProducts);
+    content = filteredProducts.map((prd) => (
+      <div key={prd.id} className="col-xl-3 col-lg-3 col-sm-6 col-6">
         <ProductItem
           product={{
             ...prd,
-            price: `KES ${prd.price.toLocaleString()}`,
+            price: formatPriceKES(prd.price),
           }}
         />
       </div>
@@ -83,7 +91,6 @@ const ProductArea = () => {
             </div>
           </div>
           <div className="col-xl-7 col-lg-6 col-md-7">
-            {/* Filter area: tabs + search */}
             <div className="filter-area d-flex flex-wrap justify-content-md-end align-items-center gap-3">
               <ul className="nav nav-tabs filter-tabs mb-0">
                 {tabs.map((tab, i) => (
@@ -196,14 +203,12 @@ const ProductArea = () => {
           box-shadow: 0 0 8px #007bff;
         }
 
-        /* Responsive: 2 items per row on small/mobile */
         @media (max-width: 768px) {
           .col-6 {
             max-width: 50% !important;
             flex: 0 0 50% !important;
           }
 
-          /* Stack filter area on mobile */
           .filter-area {
             flex-direction: column;
             align-items: stretch;
