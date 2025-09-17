@@ -17,24 +17,22 @@ const ProductArea = () => {
 
   // Simulate fetching & filtering from local data
   useEffect(() => {
-    try {
-      setIsLoading(true);
-      // Simulate slight delay for UX
-      setTimeout(() => {
-        const filtered = allProducts.filter((product) => {
-          // You can adjust logic here — for now we'll assume:
-          // If product name includes tab keyword, include it
-          return product.name.toLowerCase().includes(activeTab.toLowerCase());
-        });
-        setFilteredProducts(filtered);
-        setIsLoading(false);
-      }, 500);
-    } catch (error) {
-      console.error("Error loading products:", error);
-      setIsError(true);
+  try {
+    setIsLoading(true);
+    setTimeout(() => {
+      const filtered = allProducts.filter((product) =>
+        product.tags?.includes(activeTab)
+      );
+      setFilteredProducts(filtered);
       setIsLoading(false);
-    }
-  }, [activeTab]);
+    }, 500);
+  } catch (error) {
+    console.error("Error loading products:", error);
+    setIsError(true);
+    setIsLoading(false);
+  }
+}, [activeTab]);
+
 
   const handleActiveTab = (tab) => {
     setActiveTab(tab);
