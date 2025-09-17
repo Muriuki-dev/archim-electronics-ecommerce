@@ -15,6 +15,7 @@ import BlogArea from "@/components/blog/electronic/blog-area";
 import InstagramArea from "@/components/instagram/instagram-area";
 import CtaArea from "@/components/cta/cta-area";
 import Footer from "@/layout/footers/footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 
 
@@ -24,7 +25,7 @@ export default function Home() {
   <Wrapper>
     <SEO pageTitle='Home'/>
     <Header/>
-    
+     <WhatsAppButton />
     <HomeHeroSlider/>
     <ProductArea/>
     <NewArrivals/>
