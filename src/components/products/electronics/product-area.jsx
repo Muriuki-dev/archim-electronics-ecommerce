@@ -69,11 +69,9 @@ const ProductArea = () => {
     content = filteredProducts.map((prd) => (
       <div key={prd.id} className="col-xl-3 col-lg-3 col-sm-6 col-6">
         <ProductItem
-          product={{
-            ...prd,
-            price: formatPriceKES(prd.price),
-          }}
-        />
+  product={prd} // pass price as a number, don't format here
+/>
+
       </div>
     ));
   }
