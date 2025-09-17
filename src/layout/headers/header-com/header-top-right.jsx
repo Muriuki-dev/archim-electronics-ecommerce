@@ -17,14 +17,9 @@ function Language({active,handleActive}) {
       </span>
       <ul className={active === 'lang' ? "tp-lang-list-open" : ""}>
         <li>
-          <a href="#">Spanish</a>
+          <a href="#">Kiswahili</a>
         </li>
-        <li>
-          <a href="#">Russian</a>
-        </li>
-        <li>
-          <a href="#">Portuguese</a>
-        </li>
+        
       </ul>
     </div>
   );
@@ -39,21 +34,10 @@ function Currency({active,handleActive}) {
         className="tp-header-currency-toggle"
         id="tp-header-currency-toggle"
       >
-        USD
+        KES
       </span>
       <ul className={active === 'currency' ? "tp-currency-list-open" : ""}>
-        <li>
-          <a href="#">EUR</a>
-        </li>
-        <li>
-          <a href="#">CHF</a>
-        </li>
-        <li>
-          <a href="#">GBP</a>
-        </li>
-        <li>
-          <a href="#">KWD</a>
-        </li>
+        
       </ul>
     </div>
   );
@@ -80,18 +64,15 @@ function ProfileSetting({active,handleActive}) {
       </span>
       <ul className={active === 'setting' ? "tp-setting-list-open" : ""}>
         <li>
-          <Link href="/profile">My Profile</Link>
+          <Link href="#">Quick Tour</Link>
         </li>
         <li>
-          <Link href="/wishlist">Wishlist</Link>
+          <Link href="#">Contact Us</Link>
         </li>
         <li>
           <Link href="/cart">Cart</Link>
         </li>
-        <li>
-          {!user?.name &&<Link href="/login" className="cursor-pointer">Login</Link>}
-          {user?.name &&<a onClick={handleLogout} className="cursor-pointer">Logout</a>}
-        </li>
+        
       </ul>
     </div>
   );
