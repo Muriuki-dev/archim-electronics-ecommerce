@@ -52,10 +52,7 @@ const handleCloseCartMini = () => {
                     <h5 className="cartmini__title">
                       <Link href={`/product-details/${item._id}`}>{item.title}</Link>
                     </h5>
-                    <div className="cartmini__price-wrapper">
-                      {item.discount > 0 ? <span className="cartmini__price">${(Number(item.price) - (Number(item.price) * Number(item.discount)) / 100).toFixed(2)}</span> : <span className="cartmini__price">${item.price.toFixed(2)}</span>}
-                      <span className="cartmini__quantity">{" "}x{item.orderQuantity}</span>
-                    </div>
+                    
                   </div>
                   <a onClick={() => handleRemovePrd({ title: item.title, id: item._id })} className="cartmini__del cursor-pointer"><i className="fa-regular fa-xmark"></i></a>
                 </div>
