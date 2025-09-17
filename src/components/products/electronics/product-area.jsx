@@ -12,14 +12,16 @@ const ProductArea = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const dispatch = useDispatch();
 
-  const categories = [...new Set(allProducts.map((product) => product.type.toLowerCase()))];
+  // Dynamically extract categories
+  const categories = [...new Set(allProducts.map((product) => product?.type?.toLowerCase()))];
 
+  // ✅ Updated handleAddToCart function
   const handleAddToCart = (product) => {
     const cartItem = {
-      _id: product.id,
-      title: product.name,
+      _id: product._id ?? product.id,
+      title: product.title ?? product.name,
       price: product.price,
-      img: product.image,
+      img: product.img ?? product.image,
       quantity: 1,
     };
 
@@ -33,14 +35,15 @@ const ProductArea = () => {
       let result =
         activeTab === "all"
           ? [...allProducts]
-          : allProducts.filter((prd) => prd.type.toLowerCase() === activeTab);
+          : allProducts.filter((prd) => prd?.type?.toLowerCase() === activeTab);
 
       if (searchTerm.trim() !== "") {
         const term = searchTerm.toLowerCase();
         result = result.filter(
           (prd) =>
-            prd.name.toLowerCase().includes(term) ||
-            (prd.description && prd.description.toLowerCase().includes(term))
+            prd?.name?.toLowerCase().includes(term) ||
+            prd?.title?.toLowerCase().includes(term) ||
+            (prd?.description && prd.description.toLowerCase().includes(term))
         );
       }
 
@@ -92,8 +95,8 @@ const ProductArea = () => {
                   }}
                 >
                   <img
-                    src={prd.image}
-                    alt={prd.name}
+                    src={prd.img ?? prd.image}
+                    alt={prd.title ?? prd.name}
                     className="card-img-top"
                     style={{ objectFit: "cover", height: "180px" }}
                     onError={(e) => {
@@ -103,7 +106,7 @@ const ProductArea = () => {
                   />
                   <div className="card-body d-flex flex-column">
                     <h5 className="card-title" style={{ fontSize: "16px", fontWeight: "600" }}>
-                      {prd.name}
+                      {prd.title ?? prd.name}
                     </h5>
                     <p className="card-text" style={{ fontSize: "14px", color: "#555" }}>
                       {prd.description?.slice(0, 70)}...
@@ -133,7 +136,7 @@ const ProductArea = () => {
                       </div>
                     )}
 
-                    {/* Add to Cart */}
+                    {/* ✅ Add to Cart Button */}
                     <button
                       onClick={() => handleAddToCart(prd)}
                       className="btn btn-success mt-3 w-100"
