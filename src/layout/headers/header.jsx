@@ -36,7 +36,7 @@ const Header = () => {
                     <span>
                       <ShippingCar />
                     </span>
-                    <p>FREE Express Shipping On Orders $570+</p>
+                    <p>We Do Shipping Countrywide, Place your order and we deliver effectively</p>
                   </div>
                 </div>
                 <div className="col-md-6">
@@ -53,12 +53,13 @@ const Header = () => {
             <div className="container">
               <div className="row align-items-center">
                 <div className="col-xl-2 col-lg-2 col-md-4 col-6">
-                  <div className="logo">
-                    <Link href="/">
-                      <Image src={logo} alt="logo" />
-                    </Link>
-                  </div>
-                </div>
+  <div className="logo">
+    <Link href="/">
+      <span style={{ fontWeight: 'bold', fontSize: '20px' }}>ARCHIM ELECTRONICALS</span>
+    </Link>
+  </div>
+</div>
+
                 <div className="col-xl-6 col-lg-7 d-none d-lg-block">
                   <div className="tp-header-search pl-70">
                     <HeaderSearchForm />
@@ -109,9 +110,9 @@ const Header = () => {
                         </span>
                       </div>
                       <div className="tp-header-contact-content">
-                        <h5>Hotline:</h5>
+                        <h5>Contact us:</h5>
                         <p>
-                          <a href="tel:966-595-035-008">+(966) 595 035 008</a>
+                          <a href="tel:254713735187">0713735187</a>
                         </p>
                       </div>
                     </div>
@@ -128,13 +129,13 @@ const Header = () => {
         <div className="container">
           <div className="tp-mega-menu-wrapper p-relative">
             <div className="row align-items-center">
-              <div className="col-xl-3 col-lg-3 col-md-3 col-6">
-                <div className="logo">
-                  <Link href="/">
-                    <Image src={logo} alt="logo" />
-                  </Link>
-                </div>
-              </div>
+              <div className="col-xl-2 col-lg-2 col-md-4 col-6">
+  <div className="logo">
+    <Link href="/">
+      <span style={{ fontWeight: 'bold', fontSize: '20px' }}>ARCHIM ELECTRONICALS</span>
+    </Link>
+  </div>
+</div>
               <div className="col-xl-6 col-lg-6 col-md-6 d-none d-md-block">
                 <div className="tp-header-sticky-menu main-menu menu-style-1 d-none d-lg-block">
                   <nav id="mobile-menu">
