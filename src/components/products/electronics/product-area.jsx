@@ -1,47 +1,62 @@
 import React, { useEffect, useState } from "react";
-import { useGetProductTypeQuery } from "@/redux/features/productApi";
 import { ShapeLine, TabLine } from "@/svg";
 import ProductItem from "./product-item";
 import ErrorMsg from "@/components/common/error-msg";
 import HomePrdLoader from "@/components/loader/home/home-prd-loader";
 
+// 👉 Import your local product list
+import { products as allProducts } from "@/data/products";
+
 const tabs = ["new", "featured", "topSellers"];
 
 const ProductArea = () => {
   const [activeTab, setActiveTab] = useState("new");
-  const {data:products,isError,isLoading,refetch} = 
-  useGetProductTypeQuery({type:'electronics',query:`${activeTab}=true`});
-  // handleActiveTab
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
+
+  // Simulate fetching & filtering from local data
+  useEffect(() => {
+    try {
+      setIsLoading(true);
+      // Simulate slight delay for UX
+      setTimeout(() => {
+        const filtered = allProducts.filter((product) => {
+          // You can adjust logic here — for now we'll assume:
+          // If product name includes tab keyword, include it
+          return product.name.toLowerCase().includes(activeTab.toLowerCase());
+        });
+        setFilteredProducts(filtered);
+        setIsLoading(false);
+      }, 500);
+    } catch (error) {
+      console.error("Error loading products:", error);
+      setIsError(true);
+      setIsLoading(false);
+    }
+  }, [activeTab]);
+
   const handleActiveTab = (tab) => {
     setActiveTab(tab);
   };
-  // refetch when active value change
-  useEffect(() => {
-    refetch()
-  },[activeTab,refetch])
 
-  // decide what to render
+  // Render Logic
   let content = null;
 
   if (isLoading) {
-    content = (
-      <HomePrdLoader loading={isLoading}/>
-    );
-  }
-  if (!isLoading && isError) {
+    content = <HomePrdLoader loading={isLoading} />;
+  } else if (isError) {
     content = <ErrorMsg msg="There was an error" />;
-  }
-  if (!isLoading && !isError && products?.data?.length === 0) {
+  } else if (filteredProducts.length === 0) {
     content = <ErrorMsg msg="No Products found!" />;
-  }
-  if (!isLoading && !isError && products?.data?.length > 0) {
-    const product_items = products.data;
-    content = product_items.map((prd,i) => (
+  } else {
+    content = filteredProducts.map((prd, i) => (
       <div key={i} className="col-xl-3 col-lg-3 col-sm-6">
-        <ProductItem product={prd}/>  
-    </div>
-    ))
+        <ProductItem product={prd} />
+      </div>
+    ));
   }
+
   return (
     <section className="tp-product-area pb-55">
       <div className="container">
@@ -65,7 +80,7 @@ const ProductArea = () => {
                         activeTab === tab ? "active" : ""
                       }`}
                     >
-                      {tab.split("-").join(" ")}
+                      {tab}
                       <span className="tp-product-tab-line">
                         <TabLine />
                       </span>
@@ -76,9 +91,7 @@ const ProductArea = () => {
             </div>
           </div>
         </div>
-        <div className="row">
-          {content}
-        </div>
+        <div className="row">{content}</div>
       </div>
     </section>
   );
