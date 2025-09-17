@@ -1,106 +1,86 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation,Pagination } from 'swiper';
-// internal
-import { useGetProductTypeQuery } from '@/redux/features/productApi';
-import { NextArr, PrevArr, ShapeLine } from '@/svg';
+import React, { useEffect, useState } from 'react';
+// Internal
 import ErrorMsg from '@/components/common/error-msg';
 import ProductItem from './product-item';
 import HomeNewArrivalPrdLoader from '@/components/loader/home/home-newArrival-prd-loader';
-
-// slider setting
-const slider_setting = {
-    slidesPerView: 4,
-		spaceBetween: 30,
-		pagination: {
-			el: ".tp-arrival-slider-dot",
-			clickable: true,
-		},
-		navigation: {
-			nextEl: ".tp-arrival-slider-button-next",
-			prevEl: ".tp-arrival-slider-button-prev",
-		},
-		breakpoints: {
-			'1200': {
-				slidesPerView: 4,
-			},
-			'992': {
-				slidesPerView: 3,
-			},
-			'768': {
-				slidesPerView: 2,
-			},
-			'576': {
-				slidesPerView: 2,
-			},
-			'0': {
-				slidesPerView: 1,
-			},
-		}
-}
+import { products as allProducts } from '@/data/products'; // Update path as needed
 
 const NewArrivals = () => {
-  const { data: products, isError, isLoading } = useGetProductTypeQuery({type:'electronics',query:'new=true'});
-  // decide what to render
+  const [newArrivals, setNewArrivals] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    setLoading(true);
+
+    // Simulate fetching data with a timeout
+    setTimeout(() => {
+      try {
+        // Get one product from each category
+        const uniqueCategories = [...new Set(allProducts.map(product => product.type))]; // Get unique categories
+        const selectedProducts = uniqueCategories.map(category => {
+          return allProducts.find(product => product.type === category); // Get one product from each category
+        });
+
+        setNewArrivals(selectedProducts);
+        setLoading(false);
+      } catch (err) {
+        setError('There was an error while fetching products.');
+        setLoading(false);
+      }
+    }, 500); // Simulate loading time
+  }, []);
+
   let content = null;
 
-  if (isLoading) {
+  if (loading) {
+    content = <HomeNewArrivalPrdLoader loading={true} />;
+  } else if (error) {
+    content = <ErrorMsg msg={error} />;
+  } else if (newArrivals.length === 0) {
+    content = <ErrorMsg msg="No Products found!" />;
+  } else {
     content = (
-      <HomeNewArrivalPrdLoader loading={isLoading}/>
+      <div
+        className="product-grid"
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(2, 1fr)',
+          gap: '20px',
+        }}
+      >
+        {newArrivals.map((item) => (
+          <ProductItem key={item._id} product={item} />
+        ))}
+      </div>
     );
   }
-  if (!isLoading && isError) {
-    content = <ErrorMsg msg="There was an error" />;
-  }
-  if (!isLoading && !isError && products?.data?.length === 0) {
-    content = <ErrorMsg msg="No Products found!" />;
-  }
-  if (!isLoading && !isError && products?.data?.length > 0) {
-    const product_items = products.data;
-    content = <Swiper {...slider_setting} modules={[Navigation,Pagination]} className="tp-product-arrival-active swiper-container">
-      {product_items.map((item) => (
-        <SwiperSlide key={item._id}>
-          <ProductItem product={item} />
-        </SwiperSlide>
-      ))}
-    </Swiper>
-  }
+
   return (
-    <>
-      <section className="tp-product-arrival-area pb-55">
-        <div className="container">
-          <div className="row align-items-end">
-            <div className="col-xl-5 col-sm-6">
-              <div className="tp-section-title-wrapper mb-40">
-                <h3 className="tp-section-title">New Arrivals
-                  <ShapeLine />
-                </h3>
-              </div>
-            </div>
-            <div className="col-xl-7 col-sm-6">
-              <div className="tp-product-arrival-more-wrapper d-flex justify-content-end">
-                <div className="tp-product-arrival-arrow tp-swiper-arrow mb-40 text-end tp-product-arrival-border">
-                  <button type="button" className="tp-arrival-slider-button-prev">
-                    <PrevArr />
-                  </button>
-                   {" "}
-                  <button type="button" className="tp-arrival-slider-button-next">
-                    <NextArr />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-xl-12">
-              <div className="tp-product-arrival-slider fix">
-                {content}
-              </div>
-            </div>
-          </div>
+    <section className="tp-product-arrival-area pb-55">
+      <div className="container">
+        <div className="tp-section-title-wrapper mb-40">
+          <button
+            style={{
+              fontSize: '22px',
+              padding: '10px 20px',
+              backgroundColor: '#28a745',
+              color: '#fff',
+              border: 'none',
+              borderRadius: '8px',
+              cursor: 'pointer',
+              fontWeight: '600',
+              display: 'inline-flex',
+              alignItems: 'center',
+            }}
+            onClick={() => alert('New Arrivals section clicked!')} // Optional: Add click handler
+          >
+            New Arrivals
+          </button>
         </div>
-      </section>
-    </>
+        {content}
+      </div>
+    </section>
   );
 };
 
