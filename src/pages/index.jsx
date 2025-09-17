@@ -27,9 +27,9 @@ export default function Home() {
     
     <HomeHeroSlider/>
     <ProductArea/>
-    {/* <NewArrivals/> */}
-    {/* <FeatureArea/> */}
-    {/* <CtaArea/> */}
+    <NewArrivals/>
+    <FeatureArea/>
+    <CtaArea/>
     <Footer/>
   </Wrapper>
 )
