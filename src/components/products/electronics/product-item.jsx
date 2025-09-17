@@ -2,10 +2,34 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import dayjs from "dayjs";
+import { Cart, Wishlist } from "@/svg";
 import Timer from "@/components/common/timer";
+import { useDispatch, useSelector } from "react-redux";
+import { add_cart_product } from "@/redux/features/cartSlice";
 
 const ProductItem = ({ product, offer_style = false }) => {
   const { id, name, type, price, image, offerDate, status } = product || {};
+  const dispatch = useDispatch();
+  const cartProducts = useSelector((state) => state.cart.cart_products);
+
+  // Ensure compatibility with cart slice (_id is required)
+  const productWithId = {
+    ...product,
+    _id: product._id || product.id, // fallback if _id is missing
+    title: product.name, // for toast notification
+  };
+
+  const isInCart = cartProducts.some((item) => item._id === productWithId._id);
+
+  const handleAddProduct = () => {
+    if (status !== "out-of-stock") {
+      dispatch(add_cart_product(productWithId));
+    }
+  };
+
+  const handleWishlistProduct = () => {
+    // Wishlist logic if needed
+  };
 
   return (
     <div className={`${offer_style ? "tp-product-offer-item" : "mb-25"} tp-product-item transition-3`}>
@@ -24,6 +48,36 @@ const ProductItem = ({ product, offer_style = false }) => {
             </div>
           )}
         </Link>
+
+        <div className="tp-product-action">
+          <div className="tp-product-action-item d-flex flex-column">
+            {isInCart ? (
+              <Link href="/cart" className="tp-product-action-btn tp-product-add-cart-btn">
+                <Cart /> <span className="tp-product-tooltip">View Cart</span>
+              </Link>
+            ) : (
+              <button
+                onClick={handleAddProduct}
+                type="button"
+                className="tp-product-action-btn tp-product-add-cart-btn"
+                disabled={status === "out-of-stock"}
+              >
+                <Cart />
+                <span className="tp-product-tooltip">Add to Cart</span>
+              </button>
+            )}
+
+            <button
+              type="button"
+              className="tp-product-action-btn tp-product-add-to-wishlist-btn"
+              onClick={handleWishlistProduct}
+              disabled={status === "out-of-stock"}
+            >
+              <Wishlist />
+              <span className="tp-product-tooltip">Add To Wishlist</span>
+            </button>
+          </div>
+        </div>
       </div>
 
       <div className="tp-product-content">
@@ -35,9 +89,7 @@ const ProductItem = ({ product, offer_style = false }) => {
         </h3>
 
         <div className="tp-product-price-wrapper">
-          <span className="tp-product-price new-price">
-            Ksh{parseFloat(price).toFixed(2)}
-          </span>
+          <span className="tp-product-price new-price">Ksh{parseFloat(price).toFixed(2)}</span>
         </div>
 
         {offer_style && offerDate && (
@@ -56,6 +108,24 @@ const ProductItem = ({ product, offer_style = false }) => {
             </div>
           </div>
         )}
+
+        <div className="tp-product-add-cart-btn-card-wrapper mt-2">
+          {isInCart ? (
+            <Link href="/cart" className="tp-product-add-cart-btn-card w-100">
+              <Cart /> <span>View Cart</span>
+            </Link>
+          ) : (
+            <button
+              onClick={handleAddProduct}
+              type="button"
+              className="tp-product-add-cart-btn-card w-100"
+              disabled={status === "out-of-stock"}
+            >
+              <Cart />
+              <span>{status === "out-of-stock" ? "Out of Stock" : "Add to Cart"}</span>
+            </button>
+          )}
+        </div>
       </div>
     </div>
   );
