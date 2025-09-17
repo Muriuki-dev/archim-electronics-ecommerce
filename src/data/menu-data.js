@@ -1,122 +1,78 @@
-import home_1 from '@assets/img/menu/menu-home-1.jpg';
-import home_2 from '@assets/img/menu/menu-home-2.jpg';
-import home_3 from '@assets/img/menu/menu-home-3.jpg';
-import home_4 from '@assets/img/menu/menu-home-4.jpg';
+
 
 const menu_data = [
   {
     id: 1,
-    homes: true,
-    title: 'Home',
-    link: '/',
-    home_pages: [
-      {
-        img: home_1,
-        title: 'Electronics',
-        link: '/'
-      },
-      {
-        img: home_2,
-        title: 'Fashion',
-        link: '/home-2'
-      },
-      {
-        img: home_3,
-        title: 'Beauty',
-        link: '/home-3'
-      },
-      {
-        img: home_4,
-        title: 'Jewelry',
-        link: '/home-4'
-      }
-    ]
-  },
-  {
-    id: 2,
     products: true,
-    title: 'Products',
-    link: '/shop',
+    title: 'Electronics',
+    link: '/accessories',
     product_pages: [
       {
-        title: 'Shop Page',
-        link: '/shop',
+        title: 'Wireless Devices',
+        link: '/accessories',
         mega_menus: [
-          { title: 'Only Categories', link: '/shop-category' },
-          { title: 'Shop Grid with Sideber', link: '/shop' },
-          { title: 'Product Details', link: '/product-details' },
-        ]
+          { title: 'Routers', link: '/accessories' },
+          { title: 'Wireless Outdoor CPE', link: '/accessories' },
+          { title: 'Wireless Access Points', link: '/accessories' },
+          { title: 'USB Wifi Adapters', link: '/accessories' },
+          { title: 'Point to point Antennas', link: '/accessories' },
+          { title: 'Network Switches', link: '/accessories' },
+          { title: 'Range Extenders', link: '/accessories' },
+        ],
       },
       {
-        title: 'Products',
-        link: '/product-details',
+        title: 'Structured Cabling',
+        link: '/accessories',
         mega_menus: [
-          { title: 'Product Simple', link: '/product-details' },
-          { title: 'With Video', link: '/product-details-video' },
-          { title: 'With Countdown Timer', link: '/product-details-countdown' },
-          { title: 'Variations Swatches', link: '/product-details-swatches' },
-        ]
+          { title: 'Ethernet Cables', link: '/accessories' },
+          { title: 'Network Cabinets', link: '/accessories' },
+          { title: 'Media Converters', link: '/accessories' },
+          { title: 'POE Injectors', link: '/accessories' },
+          { title: 'Point to point Antennas', link: '/accessories' },
+          { title: 'Cabinet Shelves', link: '/accessories' },
+        ],
       },
       {
-        title: 'eCommerce',
-        link: '/shop',
+        title: 'Fibre Optic Solution',
+        link: '/accessories',
         mega_menus: [
-          { title: 'Shopping Cart', link: '/cart' },
-          { title: 'Compare', link: '/compare' },
-          { title: 'Wishlist', link: '/wishlist' },
-          { title: 'Checkout', link: '/checkout' },
-          { title: 'My account', link: '/profile' },
-        ]
+          { title: 'Fiber Optic Cables', link: '/accessories' },
+          { title: 'Fiber Optic Enclosurers', link: '/accessories' },
+          { title: 'Fast Connectors', link: '/accessories' },
+          { title: 'Fiber Patch cords & Pigtails', link: '/accessories' },
+          { title: 'Fibre Optic Bare PLC Splitters', link: '/accessories' },
+          { title: 'Optical Distribution Frames', link: '/accessories' },
+        ],
       },
       {
-        title: 'More Pages',
-        link: '/shop',
+        title: 'PBX + Phones',
+        link: '/accessories',
         mega_menus: [
-          { title: 'Login', link: '/login' },
-          { title: 'Register', link: '/register' },
-          { title: 'Forgot Password', link: '/forgot' },
-          { title: '404 Error', link: '/404' },
-        ]
+          { title: 'Yeastar PBX System', link: '/accessories' },
+          { title: 'Yealink IP Phones', link: '/accessories' },
+          { title: 'Fanvil IP Phones', link: '/accessories' },
+          { title: 'Panasonic PBX', link: '/accessories' },
+          { title: 'Panasonic Phones', link: '/accessories' },
+          { title: 'Grandstream', link: '/accessories' },
+        ],
       },
-    ]
-  },
-  {
-    id: 3,
-    sub_menu: true,
-    title: 'Shop',
-    link: '/shop',
-    sub_menus: [
-      { title: 'Shop', link: '/shop' },
-      { title: 'Right Sidebar', link: '/shop-right-sidebar' },
-      { title: 'Hidden Sidebar', link: '/shop-hidden-sidebar' },
+      {
+        title: 'Security Cameras',
+        link: '/accessories',
+        mega_menus: [
+          { title: 'CCTV Security Cameras', link: '/accessories' },
+          { title: 'Access Control', link: '/accessories' },
+        ],
+      },
     ],
   },
   {
-    id: 4,
+    id: 3,
     single_link: true,
-    title: 'Coupons',
-    link: '/coupon',
-  },
-  {
-    id: 5,
-    sub_menu: true,
-    title: 'Blog',
-    link: '/blog',
-    sub_menus: [
-      { title: 'Blog Standard', link: '/blog' },
-      { title: 'Blog Grid', link: '/blog-grid' },
-      { title: 'Blog List', link: '/blog-list' },
-      { title: 'Blog Details', link: '/blog-details' },
-      { title: 'Blog Details Full Width', link: '/blog-details-2' },
-    ]
-  },
-  {
-    id: 6,
-    single_link: true,
-    title: 'Contact',
+    title: 'Contact Us',
     link: '/contact',
   },
-]
+];
 
 export default menu_data;
 
@@ -124,96 +80,75 @@ export default menu_data;
 export const mobile_menu = [
   {
     id: 1,
-    homes: true,
-    title: 'Home',
-    link: '/',
-    home_pages: [
-      {
-        img: home_1,
-        title: 'Electronics',
-        link: '/'
-      },
-      {
-        img: home_2,
-        title: 'Fashion',
-        link: '/home-2'
-      },
-      {
-        img: home_3,
-        title: 'Beauty',
-        link: '/home-3'
-      },
-      {
-        img: home_4,
-        title: 'Jewelry',
-        link: '/home-4'
-      }
-    ]
+    sub_menu: true,
+    title: 'Wireless Devices',
+    link: '/accessories',
+    sub_menus: [
+      { title: 'Routers', link: '/accessories' },
+      { title: 'Wireless Outdoor CPE', link: '/accessories' },
+      { title: 'Wireless Access Points', link: '/accessories' },
+      { title: 'USB Wifi Adapters', link: '/accessories' },
+      { title: 'Point to point Antennas', link: '/accessories' },
+      { title: 'Network Switches', link: '/accessories' },
+      { title: 'Range Extenders', link: '/accessories' },
+    ],
   },
   {
     id: 2,
     sub_menu: true,
-    title: 'Products',
-    link: '/shop',
+    title: 'Structured Cabling',
+    link: '/accessories',
     sub_menus: [
-      { title: 'Shop', link: '/shop' },
-      { title: 'Right Sidebar', link: '/shop-right-sidebar' },
-      { title: 'Hidden Sidebar', link: '/shop-hidden-sidebar' },
-      { title: 'Only Categories', link: '/shop-category' },
-      { title: 'Product Simple', link: '/product-details' },
-      { title: 'With Video', link: '/product-details-video' },
-      { title: 'With Countdown Timer', link: '/product-details-countdown' },
-      { title: 'Variations Swatches', link: '/product-details-swatches' },
+      { title: 'Ethernet Cables', link: '/accessories' },
+      { title: 'Network Cabinets', link: '/accessories' },
+      { title: 'Media Converters', link: '/accessories' },
+      { title: 'POE Injectors', link: '/accessories' },
+      { title: 'Point to point Antennas', link: '/accessories' },
+      { title: 'Cabinet Shelves', link: '/accessories' },
     ],
   },
   {
     id: 3,
     sub_menu: true,
-    title: 'eCommerce',
-    link: '/cart',
+    title: 'Fibre Optic Solution',
+    link: '/accessories',
     sub_menus: [
-      { title: 'Shopping Cart', link: '/cart' },
-      { title: 'Compare', link: '/compare' },
-      { title: 'Wishlist', link: '/wishlist' },
-      { title: 'Checkout', link: '/checkout' },
-      { title: 'My account', link: '/profile' },
+      { title: 'Fiber Optic Cables', link: '/accessories' },
+      { title: 'Fiber Optic Enclosurers', link: '/accessories' },
+      { title: 'Fast Connectors', link: '/accessories' },
+      { title: 'Fiber Patch cords & Pigtails', link: '/accessories' },
+      { title: 'Fibre Optic Bare PLC Splitters', link: '/accessories' },
+      { title: 'Optical Distribution Frames', link: '/accessories' },
     ],
   },
   {
     id: 4,
     sub_menu: true,
-    title: 'More Pages',
-    link: '/login',
+    title: 'PBX + Phones',
+    link: '/accessories',
     sub_menus: [
-      { title: 'Login', link: '/login' },
-      { title: 'Register', link: '/register' },
-      { title: 'Forgot Password', link: '/forgot' },
-      { title: '404 Error', link: '/404' },
+      { title: 'Yeastar PBX System', link: '/accessories' },
+      { title: 'Yealink IP Phones', link: '/accessories' },
+      { title: 'Fanvil IP Phones', link: '/accessories' },
+      { title: 'Panasonic PBX', link: '/accessories' },
+      { title: 'Panasonic Phones', link: '/accessories' },
+      { title: 'Grandstream', link: '/accessories' },
     ],
-  },
-  {
-    id: 4,
-    single_link: true,
-    title: 'Coupons',
-    link: '/coupon',
   },
   {
     id: 5,
     sub_menu: true,
-    title: 'Blog',
-    link: '/blog',
+    title: 'Security Cameras',
+    link: '/accessories',
     sub_menus: [
-      { title: 'Blog Standard', link: '/blog' },
-      { title: 'Blog Grid', link: '/blog-grid' },
-      { title: 'Blog List', link: '/blog-list' },
-      { title: 'Blog Details', link: '/blog-details' },
-      { title: 'Blog Details Full Width', link: '/blog-details-2' },
-    ]
+      { title: 'CCTV Security Cameras', link: '/accessories' },
+      { title: 'Access Control', link: '/accessories' },
+    ],
   },
   {
-    id: 6,
+    id: 9,
     single_link: true,
-    title: 'Contact',
+    title: 'Contact Us',
     link: '/contact',
   },
-]
+];
