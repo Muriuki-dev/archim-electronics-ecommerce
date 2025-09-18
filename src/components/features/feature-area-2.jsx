@@ -4,7 +4,7 @@ import { Delivery, Discount, Refund, Support } from '@/svg';
 export const feature_data = [
   {
     icon: <Delivery />,
-    title: 'Free Delivery',
+    title: 'Free Delivery With Nairobi-Kiambu-Machakos',
     subtitle: 'Orders from all item'
   },
   {
@@ -14,8 +14,8 @@ export const feature_data = [
   },
   {
     icon: <Discount />,
-    title: 'Member Discount',
-    subtitle: 'Onevery order over $140.00'
+    title: 'Contact us on whatsapp ',
+    subtitle: 'On bulk order you will get discount'
   },
   {
     icon: <Support />,
