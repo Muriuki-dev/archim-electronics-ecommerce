@@ -68,12 +68,7 @@ const ProductItem = ({ product, offer_style = false }) => {
           border-radius: 8px;
           object-fit: cover;
           object-position: center;
-          transition: transform 0.3s ease;
           display: block;
-        }
-
-        .product-thumb:hover .product-image {
-          transform: scale(1.05);
         }
 
         /* Mobile styles */
