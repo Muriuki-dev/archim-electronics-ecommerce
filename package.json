@@ -1,5 +1,5 @@
 {
-  "name": "shofy-client",
+  "name": "archim-client",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,11 +10,14 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.1.0",
+      "lucide-react": "^0.0.1",
     "@popperjs/core": "^2.11.6",
     "@react-oauth/google": "^0.11.0",
     "@reduxjs/toolkit": "^1.9.3",
     "@stripe/react-stripe-js": "^2.1.0",
     "@stripe/stripe-js": "^1.52.1",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^3.0.1",
     "bootstrap": "^5.2.3",
     "dayjs": "^1.11.7",
     "eslint": "8.36.0",
@@ -25,7 +28,7 @@
     "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.43.9",
-    "react-modal": "^3.16.1",
+   "react-modal": "^3.16.1",
     "react-modal-video": "^2.0.0",
     "react-paginate": "^8.2.0",
     "react-range": "^1.8.14",
