@@ -156,7 +156,7 @@ const WhatsAppButton = ({ className }) => {
   const handleWhatsAppSubmit = (e) => {
     e.preventDefault();
     const message = `Hello, I need help with: ${selectedOptions.join(", ")}. ${customQuestion ? "Additional question: " + customQuestion : ""}`;
-    window.open(`https://wa.me/254795211116?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://wa.me/254713735187?text=${encodeURIComponent(message)}`, '_blank');
     setShowPopup(false);
     setSelectedOptions([]);
     setCustomQuestion("");
@@ -182,7 +182,7 @@ County: ${bookingForm.county || 'Not specified'}
 Nearest Town: ${bookingForm.nearestTown || 'Not specified'}
 Notes: ${bookingForm.additionalNotes || 'None'}`;
 
-    window.open(`https://wa.me/254795211116?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://wa.me/254713735187?text=${encodeURIComponent(message)}`, '_blank');
     setShowBookingPopup(false);
     setBookingForm({
       name: "",
@@ -202,7 +202,7 @@ Notes: ${bookingForm.additionalNotes || 'None'}`;
       <div style={{ position: "fixed", bottom: "80px", left: "20px", zIndex: 1001 }}>
         <button
           onClick={() => setShowBookingPopup(true)}
-          aria-label="Book a consultation with Popote Autocare"
+          aria-label="Book a consultation with Archim Electronics"
           style={{
             backgroundColor: isBookingHovering ? "#075E54" : "#128C7E",
             color: "#fff",
@@ -234,7 +234,7 @@ Notes: ${bookingForm.additionalNotes || 'None'}`;
         <button
           ref={buttonRef}
           onClick={() => setShowPopup(true)}
-          aria-label="Chat with Popote Autocare on WhatsApp"
+          aria-label="Chat with Archim Electronics on WhatsApp"
           style={{
             backgroundColor: isHovering ? "#128C7E" : "#25D366",
             color: "#fff",
@@ -257,7 +257,7 @@ Notes: ${bookingForm.additionalNotes || 'None'}`;
           onMouseLeave={() => setIsHovering(false)}
         >
           <WhatsAppIcon />
-          <span style={{ marginLeft: "12px" }}>Popote Autocare Support</span>
+          <span style={{ marginLeft: "12px" }}>Archim Electronics Support</span>
           {waveVisible && <WaveEffect />}
           {starsVisible && <StarsEffect />}
         </button>
