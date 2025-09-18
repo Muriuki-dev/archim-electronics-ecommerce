@@ -29,7 +29,7 @@ const handleCloseCartMini = () => {
           <div className="cartmini__top-wrapper">
             <div className="cartmini__top p-relative">
               <div className="cartmini__top-title">
-                <h4>Popote Shopping cart</h4>
+                <h4>Archim Electronics Shopping cart</h4>
               </div>
               <div className="cartmini__close">
                 <button onClick={() => dispatch(closeCartMini())} type="button" className="cartmini__close-btn cartmini-close-btn">
