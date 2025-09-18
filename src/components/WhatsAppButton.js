@@ -164,7 +164,7 @@ Notes: ${bookingForm.additionalNotes || 'None'}`;
       <div style={{ position: "fixed", bottom: "80px", left: "20px", zIndex: 1001 }}>
         <button
           onClick={() => setShowBookingPopup(true)}
-          aria-label="Book a consultation with Archim Electronics"
+          aria-label="Order our products with Archim Electronics"
           style={{
             backgroundColor: isBookingHovering ? "#075E54" : "#128C7E",
             color: "#fff",
@@ -187,7 +187,7 @@ Notes: ${bookingForm.additionalNotes || 'None'}`;
           onMouseLeave={() => setIsBookingHovering(false)}
         >
           <CalendarIcon />
-          <span style={{ marginLeft: "12px" }}>Book Consultation</span>
+          <span style={{ marginLeft: "12px" }}>Order Our Products</span>
         </button>
       </div>
 
@@ -526,7 +526,7 @@ const BookingPopup = ({
         justifyContent: "space-between"
       }}>
         <h3 style={{ margin: 0, fontSize: "18px", fontWeight: "600" }}>
-          Book Your Consultation
+          Order Our Products
         </h3>
         <button 
           onClick={onClose}
