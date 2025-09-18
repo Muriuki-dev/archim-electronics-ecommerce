@@ -83,18 +83,35 @@ const NewArrivals = () => {
 
         .product-grid {
           display: grid;
-          grid-template-columns: repeat(2, 1fr);
+          grid-template-columns: repeat(2, 1fr); /* Mobile: 2 per row */
           gap: 20px;
+          width: 100%;
         }
 
+        /* Tablet breakpoint - 3 products per row */
+        @media (min-width: 768px) and (max-width: 991px) {
+          .product-grid {
+            grid-template-columns: repeat(3, 1fr);
+          }
+        }
+
+        /* Desktop/Laptop breakpoint - 4 products per row */
         @media (min-width: 992px) {
           .product-grid {
             grid-template-columns: repeat(4, 1fr);
           }
         }
 
+        /* Extra large screens - 5 products per row */
+        @media (min-width: 1400px) {
+          .product-grid {
+            grid-template-columns: repeat(5, 1fr);
+          }
+        }
+
         .category-tab {
           margin-right: 10px;
+          margin-bottom: 10px; /* Added for better mobile spacing */
           padding: 8px 16px;
           border-radius: 6px;
           border: 1px solid #28a745;
@@ -103,6 +120,13 @@ const NewArrivals = () => {
           cursor: pointer;
           font-weight: 600;
           text-transform: capitalize;
+          transition: all 0.3s ease;
+        }
+
+        .category-tab:hover {
+          background-color: #28a745;
+          color: #fff;
+          transform: translateY(-1px);
         }
 
         .category-tab.active {
@@ -112,10 +136,50 @@ const NewArrivals = () => {
 
         .search-input {
           max-width: 300px;
+          width: 100%;
           padding: 8px 12px;
           font-size: 16px;
           border: 1px solid #ccc;
           border-radius: 6px;
+          transition: border-color 0.3s ease;
+        }
+
+        .search-input:focus {
+          outline: none;
+          border-color: #28a745;
+          box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.2);
+        }
+
+        /* Mobile responsive header */
+        @media (max-width: 767px) {
+          .tp-section-title-wrapper {
+            flex-direction: column !important;
+            gap: 15px;
+            align-items: stretch !important;
+          }
+          
+          .search-input {
+            max-width: 100%;
+          }
+          
+          .arrival-btn {
+            font-size: 18px;
+            padding: 8px 16px;
+            justify-content: center;
+          }
+          
+          .category-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+          }
+          
+          .category-tab {
+            margin-right: 0;
+            flex: 1;
+            min-width: fit-content;
+            text-align: center;
+          }
         }
       `}</style>
 
@@ -139,7 +203,7 @@ const NewArrivals = () => {
         </div>
 
         {/* Category Tabs */}
-        <div className="mb-4" style={{ marginBottom: '20px' }}>
+        <div className="category-tabs mb-4" style={{ marginBottom: '20px' }}>
           {categories.map(category => (
             <button
               key={category}
