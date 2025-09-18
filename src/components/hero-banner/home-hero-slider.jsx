@@ -19,10 +19,10 @@ const sliderData = [
   {
     id: 1,
     pre_title: { text: "Starting at", price: 274 },
-    title: "The best tablet Collection 2023",
+    title: "The best Electronics Collection in Kenya",
     subtitle: {
-      text_1: "Exclusive offer ",
-      percent: 35,
+      text_1: "Exclusive offers ",
+      percent: 10,
       text_2: "off this week",
     },
     img: slider_img_1,
@@ -31,10 +31,10 @@ const sliderData = [
   {
     id: 2,
     pre_title: { text: "Starting at", price: 999 },
-    title: "The best note book collection 2023",
+    title: "The best routers and laptops collection",
     subtitle: {
-      text_1: "Exclusive offer ",
-      percent: 10,
+      text_1: "Exclusive offers ",
+      percent: 5,
       text_2: "off this week",
     },
     img: slider_img_2,
@@ -43,9 +43,9 @@ const sliderData = [
   {
     id: 3,
     pre_title: { text: "Starting at", price: 999 },
-    title: "The best note book collection 2023",
+    title: "The best Electronics Collection in Kenya",
     subtitle: {
-      text_1: "Exclusive offer ",
+      text_1: "Exclusive offers ",
       percent: 10,
       text_2: "off this week",
     },
@@ -127,8 +127,8 @@ const HomeHeroSlider = () => {
                       </p>
 
                       <div className="tp-slider-btn">
-                        <Link href="/shop" className="tp-btn tp-btn-2 tp-btn-white">
-                          Shop Now
+                        <Link href="https://www.archimnet.com/" className="tp-btn tp-btn-2 tp-btn-white">
+                          Get Wifi Services
                           {" "} <ArrowRightLong />
                         </Link>
                       </div>
