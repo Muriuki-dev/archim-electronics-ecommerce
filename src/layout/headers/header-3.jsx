@@ -29,12 +29,26 @@ const HeaderThree = () => {
             <div className="container-fluid">
               <div className="row align-items-center">
                 <div className="col-xl-2 col-lg-2 col-6">
-                  <div className="logo">
-                    <Link href="/">
-                      <Image className="logo-light" src={logo_white} alt="logo" />
-                      <Image className="logo-dark" src={logo_dark} alt="logo" />
-                    </Link>
-                  </div>
+                   <div className="logo">
+    <Link href="/" style={{ textDecoration: 'none' }}>
+      <span style={{
+        fontFamily: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif',
+        fontWeight: '700',
+        fontSize: '22px',
+        letterSpacing: '1.2px',
+        color: '#1A1A1A',
+        textTransform: 'uppercase',
+        display: 'inline-block',
+        padding: '5px 10px',
+        borderRadius: '4px',
+        background: 'linear-gradient(90deg, #007CF0, #00DFD8)',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent'
+      }}>
+        ARCHIM ELECTRONICALS
+      </span>
+    </Link>
+  </div>
                 </div>
                 <div className="col-xl-8 col-lg-8 d-none d-lg-block">
                   <div className="main-menu menu-style-3 p-relative d-flex align-items-center justify-content-center">
@@ -51,8 +65,8 @@ const HeaderThree = () => {
                       </button>
                     </div>
                     <div className="tp-header-action-item d-none d-sm-block">
-                      <Link href="/wishlist" className="tp-header-action-btn">
-                        <Wishlist />
+                      <Link href="#" className="tp-header-action-btn">
+                       
                         <span className="tp-header-action-badge">{wishlist.length}</span>
                       </Link>
                     </div>
