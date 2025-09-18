@@ -16,6 +16,7 @@ const ProductItem = ({ product, offer_style = false }) => {
     ...product,
     _id: product._id || product.id,
     title: product.name,
+     image: product.image, // ✅ make sure this is not missing
   };
 
   const isInCart = cartProducts.some((item) => item._id === productWithId._id);
