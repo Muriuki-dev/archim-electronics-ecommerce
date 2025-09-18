@@ -12,7 +12,6 @@ const NewArrivals = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Extract unique categories for tabs (including 'all')
   const categories = ['all', ...new Set(allProducts.map(product => product.type))];
 
   useEffect(() => {
@@ -58,14 +57,7 @@ const NewArrivals = () => {
     content = <ErrorMsg msg="No Products found!" />;
   } else {
     content = (
-      <div
-        className="product-grid"
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(2, 1fr)',
-          gap: '20px',
-        }}
-      >
+      <div className="product-grid">
         {filteredProducts.map(item => (
           <ProductItem key={item._id} product={item} />
         ))}
@@ -75,33 +67,74 @@ const NewArrivals = () => {
 
   return (
     <section className="tp-product-arrival-area pb-55">
+      <style jsx>{`
+        .arrival-btn {
+          font-size: 22px;
+          padding: 10px 20px;
+          background-color: #28a745;
+          color: #fff;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          font-weight: 600;
+          display: inline-flex;
+          align-items: center;
+        }
+
+        .product-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+
+        @media (min-width: 992px) {
+          .product-grid {
+            grid-template-columns: repeat(4, 1fr);
+          }
+        }
+
+        .category-tab {
+          margin-right: 10px;
+          padding: 8px 16px;
+          border-radius: 6px;
+          border: 1px solid #28a745;
+          background-color: transparent;
+          color: #28a745;
+          cursor: pointer;
+          font-weight: 600;
+          text-transform: capitalize;
+        }
+
+        .category-tab.active {
+          background-color: #28a745;
+          color: #fff;
+        }
+
+        .search-input {
+          max-width: 300px;
+          padding: 8px 12px;
+          font-size: 16px;
+          border: 1px solid #ccc;
+          border-radius: 6px;
+        }
+      `}</style>
+
       <div className="container">
-        <div className="tp-section-title-wrapper mb-20" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <button
-            style={{
-              fontSize: '22px',
-              padding: '10px 20px',
-              backgroundColor: '#28a745',
-              color: '#fff',
-              border: 'none',
-              borderRadius: '8px',
-              cursor: 'pointer',
-              fontWeight: '600',
-              display: 'inline-flex',
-              alignItems: 'center',
-            }}
-            onClick={() => alert('New Arrivals section clicked!')}
-          >
+        <div
+          className="tp-section-title-wrapper mb-20"
+          style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
+        >
+          <button className="arrival-btn" onClick={() => alert('New Arrivals section clicked!')}>
             New Arrivals
           </button>
+
           {/* Search Input */}
           <input
             type="text"
             value={searchTerm}
             onChange={e => setSearchTerm(e.target.value)}
             placeholder="Search products..."
-            className="form-control"
-            style={{ maxWidth: '300px', padding: '8px 12px', fontSize: '16px' }}
+            className="search-input"
           />
         </div>
 
@@ -111,17 +144,7 @@ const NewArrivals = () => {
             <button
               key={category}
               onClick={() => setActiveTab(category)}
-              style={{
-                marginRight: '10px',
-                padding: '8px 16px',
-                borderRadius: '6px',
-                border: '1px solid #28a745',
-                backgroundColor: activeTab === category ? '#28a745' : 'transparent',
-                color: activeTab === category ? '#fff' : '#28a745',
-                cursor: 'pointer',
-                fontWeight: '600',
-                textTransform: 'capitalize',
-              }}
+              className={`category-tab ${activeTab === category ? 'active' : ''}`}
             >
               {category}
             </button>
