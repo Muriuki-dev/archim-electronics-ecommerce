@@ -67,6 +67,37 @@ const NewArrivals = () => {
 
   return (
     <section className="tp-product-arrival-area pb-55">
+      <style jsx global>{`
+        .tp-product-arrival-area .product-grid {
+          display: grid !important;
+          grid-template-columns: 1fr 1fr !important;
+          gap: 15px !important;
+          width: 100% !important;
+          margin-top: 20px !important;
+        }
+
+        .tp-product-arrival-area .product-grid > * {
+          min-width: 0 !important;
+          max-width: 100% !important;
+          width: 100% !important;
+          box-sizing: border-box !important;
+        }
+
+        /* Desktop/Laptop breakpoint - 4 products per row */
+        @media (min-width: 992px) {
+          .tp-product-arrival-area .product-grid {
+            grid-template-columns: 1fr 1fr 1fr 1fr !important;
+            gap: 20px !important;
+          }
+        }
+
+        /* Mobile responsive adjustments */
+        @media (max-width: 767px) {
+          .tp-product-arrival-area .product-grid {
+            gap: 12px !important;
+          }
+        }
+      `}</style>
       <style jsx>{`
         .arrival-btn {
           font-size: 22px;
@@ -81,28 +112,10 @@ const NewArrivals = () => {
           align-items: center;
         }
 
-        .product-grid {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 15px;
-          width: 100%;
-          margin-top: 20px;
-        }
-
-        /* Desktop/Laptop breakpoint - 4 products per row */
-        @media (min-width: 992px) {
-          .product-grid {
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-          }
-        }
-
-        /* Tablet breakpoint - 3 products per row */
-        @media (min-width: 768px) and (max-width: 991px) {
-          .product-grid {
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-          }
+        /* Force grid items to not exceed container */
+        .product-grid > * {
+          min-width: 0;
+          max-width: 100%;
         }
 
         .category-tab {
