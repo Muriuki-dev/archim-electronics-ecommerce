@@ -82,7 +82,7 @@ const Receipt = () => {
         `${item.title} (x${item.orderQuantity}) - KSh ${(item.price * item.orderQuantity).toFixed(2)}`
       ).join("\n");
 
-      const message = `Hello PopoteShop!\n\nI've placed an order with these details:\n\n` +
+      const message = `Hello Archim Electronics!\n\nI've placed an order with these details:\n\n` +
                      `*Order ID:* ${orderId}\n` +
                      `*Phone:* ${phoneNumber}\n` +
                      `*Amount:* KSh ${amount}\n` +
