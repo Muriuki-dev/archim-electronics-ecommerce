@@ -18,13 +18,20 @@ const ProductArea = () => {
 
   // Handle Add to Cart same way as NewArrivals idea
   const handleAddToCart = (product) => {
+    if (!product || !product.price) {
+      console.warn("Product missing price or invalid:", product);
+      return;
+    }
+
     const cartItem = {
-      _id: product._id ?? product.id,
-      title: product.title ?? product.name,
-      price: product.price,
-      img: product.img ?? product.image,
+      _id: product._id ?? product.id ?? "",
+      title: product.title ?? product.name ?? "Untitled Product",
+      price: Number(product.price) || 0,
+      img: product.img ?? product.image ?? "/assets/img/default-service.jpg",
       quantity: 1,
     };
+
+    console.log("Adding to cart:", cartItem);
 
     dispatch(add_to_cart(cartItem));
     dispatch(openCartMini());
@@ -46,15 +53,16 @@ const ProductArea = () => {
           const term = searchTerm.toLowerCase();
           result = result.filter(
             (prd) =>
-              prd?.name?.toLowerCase().includes(term) ||
-              prd?.title?.toLowerCase().includes(term) ||
-              (prd?.description && prd.description.toLowerCase().includes(term))
+              (prd?.name?.toLowerCase().includes(term) ||
+                prd?.title?.toLowerCase().includes(term) ||
+                (prd?.description && prd.description.toLowerCase().includes(term))) ?? false
           );
         }
 
         setFilteredProducts(result);
         setLoading(false);
       } catch (err) {
+        console.error("Error fetching products:", err);
         setError("There was an error while fetching products.");
         setLoading(false);
       }
@@ -94,8 +102,8 @@ const ProductArea = () => {
             }}
           >
             <img
-              src={prd.img ?? prd.image}
-              alt={prd.title ?? prd.name}
+              src={prd.img ?? prd.image ?? "/assets/img/default-service.jpg"}
+              alt={prd.title ?? prd.name ?? "Product Image"}
               style={{ objectFit: "cover", height: "180px" }}
               onError={(e) => {
                 e.target.onerror = null;
@@ -104,7 +112,7 @@ const ProductArea = () => {
             />
             <div className="card-body d-flex flex-column">
               <h5 style={{ fontSize: "16px", fontWeight: "600" }}>
-                {prd.title ?? prd.name}
+                {prd.title ?? prd.name ?? "Untitled Product"}
               </h5>
               <p style={{ fontSize: "14px", color: "#555" }}>
                 {prd.description?.slice(0, 70)}...
@@ -115,7 +123,7 @@ const ProductArea = () => {
                 <div className="mt-auto">
                   <div className="d-flex align-items-center gap-2">
                     <h6 className="text-danger mb-0">
-                      Ksh {prd.price.toLocaleString()}
+                      Ksh {Number(prd.price).toLocaleString()}
                     </h6>
                     {prd.oldPrice && (
                       <>
@@ -126,7 +134,7 @@ const ProductArea = () => {
                             color: "#888",
                           }}
                         >
-                          Ksh {prd.oldPrice.toLocaleString()}
+                          Ksh {Number(prd.oldPrice).toLocaleString()}
                         </span>
                         <span className="badge bg-warning text-dark">
                           -{Math.round(((prd.oldPrice - prd.price) / prd.oldPrice) * 100)}%
