@@ -43,7 +43,15 @@ const handleCloseCartMini = () => {
                 <div key={item._id} className="cartmini__widget-item">
                   <div className="cartmini__thumb">
                     <Link href={`/product-details/Ksh{item._id}`}>
-                      <Image src={item.img} width={70} height={60} alt="product img" />
+                      {item.image && (
+  <Image
+    src={item.image}
+    width={70}
+    height={60}
+    alt={item.title || 'product image'}
+  />
+)}
+
                     </Link>
                   </div>
                   <div className="cartmini__content">
