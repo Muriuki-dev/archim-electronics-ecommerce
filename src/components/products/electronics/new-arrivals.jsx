@@ -202,7 +202,7 @@ const NewArrivals = () => {
           style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
         >
           <button className="arrival-btn" onClick={() => alert('New Arrivals section clicked!')}>
-            New Arrivals
+            Order Archim Electronics Today
           </button>
 
           {/* Search Input */}
