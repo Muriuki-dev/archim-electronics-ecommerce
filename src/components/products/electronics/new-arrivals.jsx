@@ -83,35 +83,31 @@ const NewArrivals = () => {
 
         .product-grid {
           display: grid;
-          grid-template-columns: repeat(2, 1fr); /* Mobile: 2 per row */
-          gap: 20px;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 15px;
           width: 100%;
-        }
-
-        /* Tablet breakpoint - 3 products per row */
-        @media (min-width: 768px) and (max-width: 991px) {
-          .product-grid {
-            grid-template-columns: repeat(3, 1fr);
-          }
+          margin-top: 20px;
         }
 
         /* Desktop/Laptop breakpoint - 4 products per row */
         @media (min-width: 992px) {
           .product-grid {
             grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
           }
         }
 
-        /* Extra large screens - 5 products per row */
-        @media (min-width: 1400px) {
+        /* Tablet breakpoint - 3 products per row */
+        @media (min-width: 768px) and (max-width: 991px) {
           .product-grid {
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
           }
         }
 
         .category-tab {
           margin-right: 10px;
-          margin-bottom: 10px; /* Added for better mobile spacing */
+          margin-bottom: 10px;
           padding: 8px 16px;
           border-radius: 6px;
           border: 1px solid #28a745;
@@ -179,6 +175,10 @@ const NewArrivals = () => {
             flex: 1;
             min-width: fit-content;
             text-align: center;
+          }
+
+          .product-grid {
+            gap: 12px;
           }
         }
       `}</style>
