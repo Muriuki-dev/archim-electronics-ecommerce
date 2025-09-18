@@ -157,7 +157,7 @@ const ProductItem = ({ product, offer_style = false }) => {
         .product-price {
           font-size: 14px;
           font-weight: bold;
-          color: #28a745;
+          color: red;
           margin-bottom: 8px;
         }
 
