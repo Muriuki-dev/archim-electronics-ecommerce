@@ -55,21 +55,26 @@ const Header = () => {
                 <div className="col-xl-2 col-lg-2 col-md-4 col-6">
   <div className="logo">
     <Link href="/" style={{ textDecoration: 'none' }}>
-      <div style={{ 
+      <div style={{
         display: 'inline-block',
-        padding: '8px 12px',
-        backgroundColor: '#f0fdf4', // Light green background
-        borderRadius: '6px',
-        boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-        border: '2px solid #22c55e'
+        padding: '12px 18px', // increased padding for larger screens
+        backgroundColor: '#f0fdf4',
+        borderRadius: '8px',
+        boxShadow: '0 3px 6px rgba(0,0,0,0.12)',
+        border: '2px solid #22c55e',
+        transition: 'all 0.3s ease',
+        maxWidth: '100%', // prevents overflow
+        textAlign: 'center'
       }}>
-        <span style={{ 
-          color: '#15803d', // Darker green for text (green-700)
-          fontWeight: '800', 
-          fontSize: 'clamp(20px, 3vw, 32px)',
-          letterSpacing: '0.5px',
+        <span style={{
+          color: '#15803d',
+          fontWeight: '800',
+          fontSize: 'clamp(22px, 2.5vw, 36px)', // responsive sizing
+          letterSpacing: '0.6px',
           fontFamily: "'Montserrat', sans-serif",
-          textTransform: 'uppercase'
+          textTransform: 'uppercase',
+          display: 'inline-block',
+          lineHeight: '1.2'
         }}>
           Archim<span style={{ color: '#22c55e' }}>Electronics</span>
         </span>
