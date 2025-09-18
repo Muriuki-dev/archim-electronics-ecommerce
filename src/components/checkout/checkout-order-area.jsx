@@ -76,7 +76,7 @@ const CheckoutOrderArea = ({ checkoutData }) => {
                    `Here's my receipt: ${receiptUrl}`;
     
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/254795211116?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/254713735187?text=${encodedMessage}`, '_blank');
   };
 
   return (
@@ -90,7 +90,7 @@ const CheckoutOrderArea = ({ checkoutData }) => {
         borderRadius: "5px",
         fontSize: "14px"
       }}>
-        <strong>Important Notice:</strong> Popoteshop does not receive payment directly. You need to order through our agent on WhatsApp. 
+        <strong>Important Notice:</strong> Archim Electronics does not receive payment directly. You need to order through our agent on WhatsApp. 
         After entering your phone number, you will be redirected to WhatsApp to complete your order. Thank you for understanding.
       </div>
 
