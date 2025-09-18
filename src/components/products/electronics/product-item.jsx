@@ -44,6 +44,8 @@ const ProductItem = ({ product, offer_style = false }) => {
           height: 100%;
           width: 100%;
           max-width: 100%;
+          min-width: 0;
+          box-sizing: border-box;
         }
 
         .product-card:hover {
