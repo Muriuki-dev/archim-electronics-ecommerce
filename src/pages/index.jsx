@@ -27,7 +27,6 @@ export default function Home() {
     <Header/>
      <WhatsAppButton />
     <HomeHeroSlider/>
-    <ProductArea/>
     <NewArrivals/>
     <FeatureArea/>
     <CtaArea/>
