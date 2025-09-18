@@ -79,14 +79,14 @@ const MobileMenus = () => {
                     {menu.home_pages.map((home, i) => (
                       <div key={i} className="col">
                         <div className="home-menu-item">
-                          {/* <Link href={home.link}>
+                           <Link href={home.link}>
                             <div className="home-menu-thumb p-relative fix">
                               <Image src={home.img} alt="home img" />
                             </div>
                             <div className="home-menu-content">
                               <h5 className="home-menu-title">{home.title}</h5>
                             </div>
-                          </Link> */}
+                          </Link> 
                         </div>
                       </div>
                     ))}
