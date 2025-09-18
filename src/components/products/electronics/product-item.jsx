@@ -265,12 +265,10 @@ const ProductItem = ({ product, offer_style = false }) => {
         <Link href={`/product-details/${id}`}>
           <Image
             src={image}
-            width={400}
-            height={300}
+            width={500}
+            height={500}
+            style={{ width: "100%", height: "auto" }}
             alt={name}
-            className="product-image"
-            priority={false}
-            sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 20vw"
           />
         </Link>
         {status === "out-of-stock" && (
