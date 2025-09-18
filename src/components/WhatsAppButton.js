@@ -26,90 +26,52 @@ const WhatsAppButton = ({ className }) => {
 
   // Common questions for autocare
   const commonQuestions = [
-    "What services do you offer for vehicle maintenance?",
-    "Do you provide roadside assistance?",
-    "How much does a full service cost?",
-    "Do you work on all vehicle makes and models?",
-    "What are your working hours?",
-    "Do you offer mobile/on-site services?",
-    "How often should I service my vehicle?",
-    "Do you provide warranty on your services?",
-    "What payment methods do you accept?",
-    "How quickly can you attend to an emergency?"
-  ];
+  "What types of electronics do you sell?",
+  "Do you have physical shops in Kiambu, Nairobi, or Machakos?",
+  "Can I buy online and have it delivered?",
+  "Do you offer delivery services and how much does it cost?",
+  "What are your business hours?",
+  "Are your products original and brand new?",
+  "Do your products come with a warranty?",
+  "What payment methods do you accept?",
+  "Do you offer discounts on bulk purchases?",
+  "Do you sell accessories like cables, chargers, or remotes?",
+  "Can I pay on delivery?",
+  "Do you offer after-sales support?",
+  "How long does delivery take within Nairobi, Kiambu, or Machakos?",
+  "Can I pre-order items that are out of stock?",
+  "Do you have seasonal offers or promotions?"
+];
 
   // Service types for booking
   const serviceTypes = [
-    "Smart Tracker Installation",
-    "Vehicle Alarm Installation",
-    "Fuel Cutout System Installation",
-    "Smart Key Programming",
-    "Car Audio System Installation",
-    "Reverse Camera Installation",
-    "GPS Tracking System",
-    "Remote Start Installation",
-    "Window Tinting",
-    "Central Locking System",
-    "Car Alarm Repair/Service",
-    "Tracker Reactivation/Service",
-    "Immobilizer Installation",
-    "Dashcam Installation",
-    "Bluetooth System Installation",
-    "Car Play/Android Auto Installation",
-    "Vehicle Security Consultation",
-    "Electrical System Diagnostics",
-    "Battery Backup System",
-    "Other Security/Audio Service"
-  ];
+  "Extension Cables",
+  "Phone Chargers",
+  "USB Cables",
+  "Power Banks",
+  "Earphones & Headphones",
+  "Bluetooth Speakers",
+  "TV Remotes",
+  "Wall Clocks (Digital/Analog)",
+  "Electric Kettles",
+  "Electric Irons",
+  "Bulbs (LED, Energy Saving)",
+  "Rechargeable Torches",
+  "TV Aerials/Antennas",
+  "Electric Sockets & Plugs",
+  "Multi-Plug Adaptors",
+  "Phone Holders",
+  "Wall Brackets (for TVs)",
+  "Laptop Chargers",
+  "Dry Cell & Rechargeable Batteries",
+  "Small Solar Lamps"
+];
 
   // All counties in Kenya
   const kenyaCounties = [
-    "Mombasa",
-    "Kwale",
-    "Kilifi",
-    "Tana River",
-    "Lamu",
-    "Taita-Taveta",
-    "Garissa",
-    "Wajir",
-    "Mandera",
-    "Marsabit",
-    "Isiolo",
-    "Meru",
-    "Tharaka-Nithi",
-    "Embu",
-    "Kitui",
     "Machakos",
-    "Makueni",
-    "Nyandarua",
-    "Nyeri",
-    "Kirinyaga",
-    "Murang'a",
+   "Murang'a",
     "Kiambu",
-    "Turkana",
-    "West Pokot",
-    "Samburu",
-    "Trans Nzoia",
-    "Uasin Gishu",
-    "Elgeyo-Marakwet",
-    "Nandi",
-    "Baringo",
-    "Laikipia",
-    "Nakuru",
-    "Narok",
-    "Kajiado",
-    "Kericho",
-    "Bomet",
-    "Kakamega",
-    "Vihiga",
-    "Bungoma",
-    "Busia",
-    "Siaya",
-    "Kisumu",
-    "Homa Bay",
-    "Migori",
-    "Kisii",
-    "Nyamira",
     "Nairobi"
   ];
 
@@ -646,7 +608,7 @@ const BookingPopup = ({
               fontWeight: "500",
               color: "#333"
             }}>
-              Service Required *
+              Product Required *
             </label>
             <select
               id="serviceType"
@@ -663,7 +625,7 @@ const BookingPopup = ({
                 backgroundColor: "#fff"
               }}
             >
-              <option value="">Select a service</option>
+              <option value="">Select a product</option>
               {serviceTypes.map((service, index) => (
                 <option key={index} value={service}>{service}</option>
               ))}
