@@ -55,22 +55,25 @@ const Header = () => {
                 <div className="col-xl-2 col-lg-2 col-md-4 col-6">
   <div className="logo">
     <Link href="/" style={{ textDecoration: 'none' }}>
-      <span style={{
-        fontFamily: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif',
-        fontWeight: '700',
-        fontSize: '22px',
-        letterSpacing: '1.2px',
-        color: '#1A1A1A',
-        textTransform: 'uppercase',
+      <div style={{ 
         display: 'inline-block',
-        padding: '5px 10px',
-        borderRadius: '4px',
-        background: 'linear-gradient(90deg, #007CF0, #00DFD8)',
-        WebkitBackgroundClip: 'text',
-        WebkitTextFillColor: 'transparent'
+        padding: '8px 12px',
+        backgroundColor: '#f0fdf4', // Light green background
+        borderRadius: '6px',
+        boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+        border: '2px solid #22c55e'
       }}>
-        ARCHIM ELECTRONICALS
-      </span>
+        <span style={{ 
+          color: '#15803d', // Darker green for text (green-700)
+          fontWeight: '800', 
+          fontSize: 'clamp(20px, 3vw, 32px)',
+          letterSpacing: '0.5px',
+          fontFamily: "'Montserrat', sans-serif",
+          textTransform: 'uppercase'
+        }}>
+          Archim<span style={{ color: '#22c55e' }}>Electronics</span>
+        </span>
+      </div>
     </Link>
   </div>
 </div>
