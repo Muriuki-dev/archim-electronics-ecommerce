@@ -37,11 +37,13 @@ const ProductItem = ({ product, offer_style = false }) => {
           background: #ffffff;
           border-radius: 12px;
           box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-          padding: 16px;
+          padding: 12px;
           transition: transform 0.3s ease, box-shadow 0.3s ease;
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
+          height: 100%;
+          width: 100%;
+          max-width: 100%;
         }
 
         .product-card:hover {
@@ -51,55 +53,95 @@ const ProductItem = ({ product, offer_style = false }) => {
 
         .product-thumb {
           position: relative;
-          margin-bottom: 12px;
+          margin-bottom: 8px;
+          width: 100%;
         }
 
         .product-image {
           width: 100%;
+          height: 150px;
           border-radius: 8px;
           object-fit: cover;
-          height: auto;
-          max-height: 200px;
+        }
+
+        /* Mobile styles */
+        @media (max-width: 767px) {
+          .product-image {
+            height: 120px;
+          }
+          .product-card {
+            padding: 10px;
+          }
+        }
+
+        /* Desktop styles */
+        @media (min-width: 992px) {
+          .product-image {
+            height: 180px;
+          }
+          .product-card {
+            padding: 16px;
+          }
         }
 
         .product-badge {
           position: absolute;
-          top: 10px;
-          left: 10px;
+          top: 8px;
+          left: 8px;
           background-color: #ff4d4f;
           color: #fff;
-          padding: 4px 8px;
+          padding: 3px 6px;
           border-radius: 4px;
-          font-size: 12px;
+          font-size: 11px;
           font-weight: 600;
         }
 
+        .product-info {
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
+        }
+
         .product-type {
-          font-size: 13px;
+          font-size: 11px;
           color: #666;
           margin-bottom: 4px;
           text-transform: capitalize;
         }
 
         .product-name {
-          font-size: 1rem;
+          font-size: 14px;
           font-weight: 600;
           margin-bottom: 6px;
           color: #222;
+          line-height: 1.3;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+
+        .product-name a {
+          color: inherit;
+          text-decoration: none;
+        }
+
+        .product-name a:hover {
+          color: #28a745;
         }
 
         .product-price {
-          font-size: 1rem;
+          font-size: 14px;
           font-weight: bold;
-          color: red;
-          margin-bottom: 10px;
+          color: #28a745;
+          margin-bottom: 8px;
         }
 
         .product-actions {
           display: flex;
           flex-direction: column;
-          gap: 10px;
-          margin-bottom: 10px;
+          gap: 6px;
+          margin-top: auto;
         }
 
         .action-btn {
@@ -107,12 +149,13 @@ const ProductItem = ({ product, offer_style = false }) => {
           align-items: center;
           justify-content: center;
           background: #f9f9f9;
-          padding: 8px;
+          padding: 6px 8px;
           border-radius: 6px;
           border: none;
           cursor: pointer;
           font-weight: 600;
           transition: background 0.3s;
+          font-size: 12px;
         }
 
         .action-btn:hover {
@@ -129,21 +172,67 @@ const ProductItem = ({ product, offer_style = false }) => {
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 10px 12px;
+          padding: 8px 10px;
           font-weight: 600;
           border-radius: 6px;
           border: none;
           background-color: #28a745;
           color: white;
           transition: background 0.3s ease;
+          font-size: 12px;
+          text-decoration: none;
         }
 
         .full-width-btn:hover {
           background-color: #218838;
         }
 
+        .full-width-btn:disabled {
+          background-color: #6c757d;
+          cursor: not-allowed;
+        }
+
         .countdown {
-          margin-top: 10px;
+          margin-top: 8px;
+          font-size: 11px;
+        }
+
+        .countdown ul {
+          display: flex;
+          justify-content: space-between;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        .countdown ul li {
+          text-align: center;
+          font-size: 10px;
+        }
+
+        /* Desktop specific adjustments */
+        @media (min-width: 992px) {
+          .product-name {
+            font-size: 16px;
+          }
+          
+          .product-price {
+            font-size: 16px;
+          }
+          
+          .product-type {
+            font-size: 12px;
+          }
+          
+          .action-btn {
+            font-size: 13px;
+            padding: 8px 10px;
+          }
+          
+          .full-width-btn {
+            font-size: 13px;
+            padding: 10px 12px;
+          }
         }
       `}</style>
 
@@ -152,8 +241,8 @@ const ProductItem = ({ product, offer_style = false }) => {
         <Link href={`/product-details/${id}`}>
           <Image
             src={image}
-            width={500}
-            height={500}
+            width={300}
+            height={200}
             alt={name}
             className="product-image"
           />
@@ -191,7 +280,7 @@ const ProductItem = ({ product, offer_style = false }) => {
         <div className="product-actions">
           {isInCart ? (
             <Link href="/cart" className="full-width-btn">
-              <Cart /> <span style={{ marginLeft: "8px" }}>View Cart</span>
+              <Cart /> <span style={{ marginLeft: "6px" }}>View Cart</span>
             </Link>
           ) : (
             <button
@@ -200,7 +289,7 @@ const ProductItem = ({ product, offer_style = false }) => {
               disabled={status === "out-of-stock"}
             >
               <Cart />
-              <span style={{ marginLeft: "8px" }}>
+              <span style={{ marginLeft: "6px" }}>
                 {status === "out-of-stock" ? "Out of Stock" : "Add to Cart"}
               </span>
             </button>
@@ -212,7 +301,7 @@ const ProductItem = ({ product, offer_style = false }) => {
             disabled={status === "out-of-stock"}
           >
             <Wishlist />
-            <span style={{ marginLeft: "6px" }}>Add to Wishlist</span>
+            <span style={{ marginLeft: "4px" }}>Wishlist</span>
           </button>
         </div>
       </div>
