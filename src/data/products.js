@@ -1,162 +1,122 @@
 export const products = [
   {
     id: 1,
-    name: "Cat5e RJ45 Ethernet Cable 20m",
-    type: "Cable",
-    price: 1000,
-    image: "/assets/img/category/shop1.jpg",
+    name: "Neelux Mosquito Killer Lamp – Electric Insect Trap",
+    type: "Bulb",
+    price: 550,
+    image: "/assets/img/contact/neeluxmosquitokillerlamp550.jpg",
     tags: ["new"]
   },
   {
     id: 2,
-    name: "Cat6 Ethernet Patch Cord 2m",
-    type: "Cable",
+    name: "Bluetooth LED Bulb – Multi-Color Light with Speaker",
+    type: "Bulb",
     price: 400,
-    image: "/assets/img/category/shop2.jpg",
+    image: "/assets/img/contact/bulbbluetoothcolorled399.jpg",
     tags: ["new", "featured"]
   },
   {
     id: 3,
-    name: "Veto 1 Gang 1 Way Plastic Switch",
-    type: "Switch",
-    price: 30,
-    image: "/assets/img/category/shop3.jpg",
+    name: "2M USB Snake Bulb – Flexible LED Light",
+    type: "Bulb",
+    price: 599,
+    image: "/assets/img/contact/2musbbulbsnake599.jpg",
     tags: ["featured"]
   },
   {
     id: 4,
-    name: "Veto 2 Gang 1 Way Smooth Gold Switch",
-    type: "Switch",
-    price: 370,
-    image: "/assets/img/category/shop4.jpg",
+    name: "1.5mm Single Core Wire – 90M Green/Yellow",
+    type: "Wire",
+    price: 450,
+    image: "/assets/img/contact/singe1.5mm90mgreenyellow1450.jpg",
     tags: ["topSellers"]
   },
   {
     id: 5,
-    name: "E27 LED Bulb 12W Warm Light",
-    type: "Bulb",
-    price: 160,
-    image: "/assets/img/category/shop5.jpg",
+    name: "Single Core Electrical Wire – 90M Roll",
+    type: "Wire",
+    price: 1499,
+    image: "/assets/img/contact/singlecorewire1499.jpg",
     tags: ["new", "topSellers"]
   },
   {
     id: 6,
-    name: "E27 LED Bulb 5W Daylight",
+    name: "E27 LED Bulb – 5W Daylight White",
     type: "Bulb",
-    price: 80,
-    image: "/assets/img/category/shop6.jpg",
+    price: 399,
+    image: "/assets/img/contact/bulbbluetoothcolorled399.jpg",
     tags: ["featured"]
   },
   {
     id: 7,
-    name: "Ceiling Light 36W Square Panel",
-    type: "Light Fixture",
-    price: 2500,
-    image: "/assets/img/category/shop7.jpg",
+    name: "Vellmax LED Bulb – 9W Energy Saver",
+    type: "Wire",
+    price: 350,
+    image: "/assets/img/contact/vellmax9watt350.jpg",
     tags: ["topSellers"]
   },
   {
     id: 8,
-    name: "Power Extension Cord 4 Way 3m",
-    type: "Power Accessory",
-    price: 500,
-    image: "/assets/img/category/shop8.jpg",
+    name: "Wireless AirPods-style Earphones – Bluetooth",
+    type: "Earphone",
+    price: 399,
+    image: "/assets/img/contact/airpodhearphones399.jpg",
     tags: ["new"]
   },
   {
     id: 9,
-    name: "Travel Adapter",
-    type: "Power Accessory",
-    price: 70,
-    image: "/assets/img/category/shop9.jpg",
+    name: "AKG In-Ear Earphones – Wired 3.5mm Jack",
+    type: "Earphone",
+    price: 139,
+    image: "/assets/img/contact/akghearphone139.jpg",
     tags: ["topSellers"]
   },
   {
     id: 10,
-    name: "USB-C Power Adapter 12V 24W",
-    type: "Adapter",
-    price: 500,
-    image: "/assets/img/category/shop10.jpg",
+    name: "Oraimo Sports Earphones – Sweat-Resistant Design",
+    type: "Earphone",
+    price: 470,
+    image: "/assets/img/contact/oraimosporthearphone470.jpg",
     tags: ["featured"]
   },
   {
     id: 11,
-    name: "TP-Link TL-WR941N Wireless Router",
-    type: "Router",
-    price: 4800,
-    image: "/assets/img/category/shop11.jpg",
+    name: "Heavy Duty Extension Socket – 4-Way Power Strip",
+    type: "Extension",
+    price: 699,
+    image: "/assets/img/contact/extsocket699.jpg",
     tags: ["topSellers", "featured"]
   },
   {
     id: 12,
-    name: "TP-Link 8-Port Desktop Switch (10/100Mbps)",
-    type: "Switch / Networking",
-    price: 1500,
-    image: "/assets/img/category/shop12.jpg",
+    name: "Compact Extension Sachet – 3-Way Socket",
+    type: "Extension",
+    price: 699,
+    image: "/assets/img/contact/ext699.jpg",
     tags: ["new"]
   },
   {
     id: 13,
-    name: "Telephone Extension Cable 4 Core",
-    type: "Cable",
-    price: 220,
-    image: "/assets/img/category/shop13.jpg",
+    name: "Durable Extension Sachet – 3-Way Power Cord",
+    type: "Extension",
+    price: 490,
+    image: "/assets/img/contact/ext490.jpg",
     tags: ["featured"]
   },
   {
     id: 14,
-    name: "Coaxial RG6 Cable 300m Roll",
-    type: "Cable",
-    price: 6000,
-    image: "/assets/img/category/shop14.jpg",
+    name: "Standard Extension Sachet – 3 Sockets",
+    type: "Extension",
+    price: 600,
+    image: "/assets/img/contact/ext600.jpg",
     tags: ["topSellers"]
   },
   {
     id: 15,
-    name: "Light Switch Dimmer 500W",
-    type: "Switch / Dimmer",
-    price: 820,
-    image: "/assets/img/category/shop16.jpg",
+    name: "Affordable Extension Sachet – 3-Way Power Socket",
+    type: "Extension",
+    price: 450,
+    image: "/assets/img/contact/ext450.jpg",
     tags: ["new"]
-  },
-  {
-    id: 16,
-    name: "USB to RJ45 Ethernet Adapter",
-    type: "Adapter",
-    price: 1200,
-    image: "/assets/img/category/shop17.jpg",
-    tags: ["featured"]
-  },
-  {
-    id: 17,
-    name: "18650 Lithium Rechargeable Battery",
-    type: "Battery",
-    price: 200,
-    image: "/assets/img/category/shop18.jpg",
-    tags: ["new", "topSellers"]
-  },
-  {
-    id: 18,
-    name: "47 inch LED TV Panel",
-    type: "Display / Screen",
-    price: 40000,
-    image: "/assets/img/category/shop19.jpg",
-    tags: ["topSellers"]
-  },
-  {
-    id: 19,
-    name: "Solar Flood Light 100W IP66",
-    type: "Light / Outdoor",
-    price: 4500,
-    image: "/assets/img/category/shop20.jpg",
-    tags: ["featured", "new"]
-  },
-  {
-    id: 20,
-    name: "Network Cable Tester (RJ45 / RJ11)",
-    type: "Tool / Accessory",
-    price: 650,
-    image: "/assets/img/category/shop21.jpg",
-    tags: ["topSellers"]
   }
 ];
