@@ -311,9 +311,48 @@ export const products = [
     image: "/assets/img/contact/pip5.jpg",
     tags: ["topSellers"]
   },
-  
   {
     id: 39,
+    name: "Andeli Double Pole Circuit Breakers 63A, MCB",
+    type: "Double Pole",
+    price: 5999,
+    image: "/assets/img/contact/dp1.jpg",
+    tags: ["topSellers"]
+  },
+  {
+    id: 40,
+    name: "4 Way Consumer Unit + Double Pole",
+    type: "Double Pole",
+    price: 1645,
+    image: "/assets/img/contact/dp2.jpg",
+    tags: ["topSellers"]
+  },
+  {
+    id: 41,
+    name: "Suntree Dc Breaker 63A 2P Double Pole",
+    type: "Double Pole",
+    price: 4499,
+    image: "/assets/img/contact/dp3.jpg",
+    tags: ["topSellers"]
+  },
+  {
+    id: 42,
+    name: "Havells Double Pole MCB, 63 Or 100 Amps",
+    type: "Double Pole",
+    price: 1399,
+    image: "/assets/img/contact/dp4.jpg",
+    tags: ["topSellers"]
+  },
+  {
+    id: 43,
+    name: "Tronic Voltage Protector 63 Amps",
+    type: "Double Pole",
+    price: 3499,
+    image: "/assets/img/contact/dp5.jpg",
+    tags: ["topSellers"]
+  },
+  {
+    id: 44,
     name: "Affordable Extension Sachet – 3-Way Power Socket",
     type: "Extension",
     price: 450,
