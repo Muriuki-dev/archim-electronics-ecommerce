@@ -271,10 +271,49 @@ export const products = [
     image: "/assets/img/contact/tp6.jpg",
     tags: ["topSellers"]
   },
-  
+   {
+    id: 34,
+    name: "Canvas Heat Resistant Water Hose Pipe 2 inch X 50M",
+    type: "pipes",
+    price: 6890,
+    image: "/assets/img/contact/pip1.jpg",
+    tags: ["topSellers"]
+  },
+   {
+    id: 35,
+    name: "1x(120ft) Striped Garden Hose Pipe (120FT) Extra Strength",
+    type: "pipes",
+    price: 6499,
+    image: "/assets/img/contact/pip2.jpg",
+    tags: ["topSellers"]
+  },
+   {
+    id: 36,
+    name: "Suction Hose Pipe 2 Inch 10m",
+    type: "pipes",
+    price: 5990,
+    image: "/assets/img/contact/pip3.jpg",
+    tags: ["topSellers"]
+  },
+   {
+    id: 37,
+    name: "Tolsen Hose Pipes Magic Hose Pipe Garden Spiral Hose 3/8",
+    type: "pipes",
+    price: 2999,
+    image: "/assets/img/contact/pip4.jpg",
+    tags: ["topSellers"]
+  },
+   {
+    id: 38,
+    name: "Tan Uk Hose Pipes PVC",
+    type: "pipes",
+    price: 2990,
+    image: "/assets/img/contact/pip5.jpg",
+    tags: ["topSellers"]
+  },
   
   {
-    id: 34,
+    id: 39,
     name: "Affordable Extension Sachet – 3-Way Power Socket",
     type: "Extension",
     price: 450,
