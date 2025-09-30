@@ -353,6 +353,70 @@ export const products = [
   },
   {
     id: 44,
+    name: "Solar Light Dummy Solar Light Motion Sensor Security Dummy Camera",
+    type: "Solar Lights",
+    price: 1500,
+    image: "/assets/img/contact/sl1.jpg",
+    tags: ["topSellers"]
+  },
+  {
+    id: 45,
+    name: "Itel Multifunctional Solar Lighting System With FM & Music ISLS-002B",
+    type: "Solar Lights",
+    price: 3099,
+    image: "/assets/img/contact/sl2.jpg",
+    tags: ["topSellers"]
+  },
+  {
+    id: 46,
+    name: "72COB Solar MINI Street Light, PIR Motion Sensor, Smart Light Control, IP65 Waterproof Cool White",
+    type: "Solar Lights",
+    price: 580,
+    image: "/assets/img/contact/sl3.jpg",
+    tags: ["topSellers"]
+  },
+  {
+    id: 47,
+    name: "JSOT 200W Solar Floodlight – Dusk to Dawn + Remote + Solar Panel – IP67 Waterproof",
+    type: "Solar Lights",
+    price: 2880,
+    image: "/assets/img/contact/sl4.jpg",
+    tags: ["topSellers"]
+  },
+  {
+    id: 48,
+    name: "Solar Light Outdoor 120 LED Motion Sensor Lights With Remote Control 3 Heads Security LED Flood Lights",
+    type: "Solar Lights",
+    price: 1200,
+    image: "/assets/img/contact/sl5.jpg",
+    tags: ["topSellers"]
+  },
+  {
+    id: 49,
+    name: "Solar Light 40W, 60W, 100W, 200W Solar Outdoor Lights Waterproof Bright SOLAR FLOODLIGHT",
+    type: "Solar Lights",
+    price: 2000,
+    image: "/assets/img/contact/sl6.jpg",
+    tags: ["topSellers"]
+  },
+   {
+    id: 50,
+    name: "Solar Light 300Watts High-power Solar Lights Outdoor COB Solar Motion Sensor Lights with 3 Heads",
+    type: "Solar Lights",
+    price: 2100,
+    image: "/assets/img/contact/sl7.jpg",
+    tags: ["topSellers"]
+  },
+   {
+    id: 51,
+    name: "SunKing Home Plus Pro Solar Lighting Sytem Kit Phone Charging 2yr Warranty",
+    type: "Solar Lights",
+    price: 15000,
+    image: "/assets/img/contact/sl8.jpg",
+    tags: ["topSellers"]
+  },
+  {
+    id: 52,
     name: "Affordable Extension Sachet – 3-Way Power Socket",
     type: "Extension",
     price: 450,
