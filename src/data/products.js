@@ -417,6 +417,38 @@ export const products = [
   },
   {
     id: 52,
+    name: "Fused Socket Multiplug Travel Adapter",
+    type: "Adapters",
+    price: 350,
+    image: "/assets/img/contact/adp1.jpg",
+    tags: ["topSellers"]
+  },
+  {
+    id: 53,
+    name: "4 In 1 Type-c+HDMI+VGA+PD Charging+USB 3.0 Adapter Docking Station Hub",
+    type: "Adapters",
+    price: 905,
+    image: "/assets/img/contact/adp2.jpg",
+    tags: ["topSellers"]
+  },
+  {
+    id: 54,
+    name: "3 Way Socket Household Multi Plug Adapter",
+    type: "Adapters",
+    price: 650,
+    image: "/assets/img/contact/adp3.jpg",
+    tags: ["topSellers"]
+  },
+   {
+    id: 55,
+    name: "Multiplug Travel Adapter",
+    type: "Adapters",
+    price: 500,
+    image: "/assets/img/contact/adp4.jpg",
+    tags: ["topSellers"]
+  },
+  {
+    id: 56,
     name: "Affordable Extension Sachet – 3-Way Power Socket",
     type: "Extension",
     price: 450,
