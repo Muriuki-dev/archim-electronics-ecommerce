@@ -239,10 +239,42 @@ export const products = [
     image: "/assets/img/contact/tp2.jpg",
     tags: ["topSellers"]
   },
+  {
+    id: 30,
+    name: "Aluminium Foil Butyl Waterproof Sealing Tape",
+    type: "Tapes",
+    price: 715,
+    image: "/assets/img/contact/tp3.jpg",
+    tags: ["topSellers"]
+  },
+  {
+    id: 31,
+    name: "Liquid Insulating Tape Repair Rubber Electrical Wire",
+    type: "Tapes",
+    price: 905,
+    image: "/assets/img/contact/tp4.jpg",
+    tags: ["topSellers"]
+  },
+  {
+    id: 32,
+    name: "High Temperature Resistance Aluminum Tape",
+    type: "Tapes",
+    price: 650,
+    image: "/assets/img/contact/tp5.jpg",
+    tags: ["topSellers"]
+  },
+  {
+    id: 33,
+    name: "High Temperature Heat Resistance PCB Insulation Tape",
+    type: "Tapes",
+    price: 500,
+    image: "/assets/img/contact/tp6.jpg",
+    tags: ["topSellers"]
+  },
   
   
   {
-    id: 30,
+    id: 34,
     name: "Affordable Extension Sachet – 3-Way Power Socket",
     type: "Extension",
     price: 450,
