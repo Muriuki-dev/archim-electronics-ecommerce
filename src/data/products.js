@@ -111,8 +111,82 @@ export const products = [
     image: "/assets/img/contact/ext600.jpg",
     tags: ["topSellers"]
   },
-  {
+   {
     id: 15,
+    name: "45A Shower Switch with Neon Indicator",
+    type: "Switches",
+    price: 480,
+    image: "/assets/img/contact/pic1.jpg",
+    tags: ["topSellers"]
+  },
+   {
+    id: 16,
+    name: "Dp Light 1 Gang 2 Way Switch",
+    type: "Switches",
+    price: 345,
+    image: "/assets/img/contact/pic2.jpg",
+    tags: ["topSellers"]
+  },
+   {
+    id: 17,
+    name: "HG Marcos GREY 1 GANG 13AMPS SINGLE SOCKET",
+    type: "Switches",
+    price: 800,
+    image: "/assets/img/contact/pic3.jpg",
+    tags: ["topSellers"]
+  },
+  {
+    id: 18,
+    name: "Dp Light 2 Gang 2 Way Switch",
+    type: "Switches",
+    price: 745,
+    image: "/assets/img/contact/pic4.jpg",
+    tags: ["topSellers"]
+  },
+  {
+    id: 19,
+    name: "Type Double Socket Protector Electric Plug Cover",
+    type: "Switches",
+    price: 1099,
+    image: "/assets/img/contact/pic5.jpg",
+    tags: ["topSellers"]
+  },
+  {
+    id: 20,
+    name: "TRONIC 4 GANG SWITCH",
+    type: "Switches",
+    price: 400,
+    image: "/assets/img/contact/pic6.jpg",
+    tags: ["topSellers"]
+  },
+   {
+    id: 20,
+    name: "TRONIC 4 GANG SWITCH",
+    type: "Switches",
+    price: 400,
+    image: "/assets/img/contact/pic6.jpg",
+    tags: ["topSellers"]
+  },
+   {
+    id: 21,
+    name: "Nep 3 Gang 2 Way VIP Switches",
+    type: "Switches",
+    price: 1200,
+    image: "/assets/img/contact/pic7.jpg",
+    tags: ["topSellers"]
+  },
+   {
+    id: 22,
+    name: "TRONIC SINGLE SOCKET 10 PCS",
+    type: "Switches",
+    price: 3199,
+    image: "/assets/img/contact/pic8.jpg",
+    tags: ["topSellers"]
+  },
+   
+  
+  {
+    id: 23,
     name: "Affordable Extension Sachet – 3-Way Power Socket",
     type: "Extension",
     price: 450,
