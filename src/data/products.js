@@ -183,10 +183,66 @@ export const products = [
     image: "/assets/img/contact/pic8.jpg",
     tags: ["topSellers"]
   },
-   
+   {
+    id: 23,
+    name: "30pcs Wire Connector, Quick Terminal Block, Junction Box",
+    type: "Junction Box",
+    price: 850,
+    image: "/assets/img/contact/js1.jpg",
+    tags: ["topSellers"]
+  },
+   {
+    id: 24,
+    name: "100*100*70mm Waterproof Junction /Adaptor Box",
+    type: "Junction Box",
+    price: 902,
+    image: "/assets/img/contact/js2.jpg",
+    tags: ["topSellers"]
+  },
+   {
+    id: 25,
+    name: "150 X 150x 70mm Waterproof Junction /Adaptor Box",
+    type: "Junction Box",
+    price: 1205,
+    image: "/assets/img/contact/js3.jpg",
+    tags: ["topSellers"]
+  },
+   {
+    id: 26,
+    name: "255 X 200 X 80mm Waterproof Junction /Adaptor Box",
+    type: "Junction Box",
+    price: 1877,
+    image: "/assets/img/contact/js4.jpg",
+    tags: ["topSellers"]
+  },
+   {
+    id: 27,
+    name: "200 X 200 X 80mm Waterproof Junction /Adaptor Box",
+    type: "Junction Box",
+    price: 1805,
+    image: "/assets/img/contact/js5.jpg",
+    tags: ["topSellers"]
+  },
+   {
+    id: 28,
+    name: "10M 1360mmWidth 0.13mmThick PTFE Tape Teflon",
+    type: "Tapes",
+    price: 2973,
+    image: "/assets/img/contact/tp1.jpg",
+    tags: ["topSellers"]
+  },
+   {
+    id: 29,
+    name: "Sunup 10 Pack - Globe Electrical Insulating Tape",
+    type: "Tapes",
+    price: 380,
+    image: "/assets/img/contact/tp2.jpg",
+    tags: ["topSellers"]
+  },
+  
   
   {
-    id: 23,
+    id: 30,
     name: "Affordable Extension Sachet – 3-Way Power Socket",
     type: "Extension",
     price: 450,
